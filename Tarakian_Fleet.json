@@ -1,0 +1,1965 @@
+{
+  "catalogue": {
+    "name": "Tarakian Fleet",
+    "id": "fe0d6a6e-0657-42d2-ca70-fa5037cc8382",
+    "authorContact": "steve_990@hotmail.com",
+    "authorName": "Steve_990",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "417a1fa3-3f8e-7789-d5ec-a4ebd35323cd",
+    "gameSystemRevision": 1,
+    "revision": 10,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
+    "rules": [
+      {
+        "name": "Tarakian Fleet Statistics",
+        "id": "6073bb63-972c-51f1-2ec0-97ecc62ea656",
+        "description": "Fleet Tactics Bonus: 1\nCommand Distance: 7\"",
+        "hidden": false,
+        "page": 0
+      }
+    ],
+    "selectionEntries": [
+      {
+        "name": "Battleship",
+        "id": "03d0ffcb-179e-3dd1-90bd-d124782fc7f8",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "03d0ffcb-179e-3dd1-90bd-d124782fc7f8-9491469f-4e1a-978c-e141-b7f12a6a7b91", "primary": true, "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 2
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 800
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 1200
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 3,
+            "conditions": [
+              {
+                "childId": "any",
+                "field": "limit::points",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "roster",
+                "shared": true,
+                "type": "greaterThan",
+                "value": 1200
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "6ae17b19-6f02-91e0-5b42-0640e4ed795c",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Ganak Battleship (Uses Sanarl Profile Below)",
+                "id": "6bcb283f-d359-d1ec-92b6-23c585705fe5",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "model",
+                "categoryLinks": [{"id": "6bcb283f-d359-d1ec-92b6-23c585705fe5-9491469f-4e1a-978c-e141-b7f12a6a7b91", "primary": true, "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91"}],
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "selectionEntries": [
+                  {
+                    "name": "Ganak",
+                    "id": "0670-8778-d5f7-d485",
+                    "collective": false,
+                    "hidden": false,
+                    "type": "upgrade",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 1
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                    "entryLinks": [{"id": "72d5-887c-06bb-cd3d", "hidden": false, "targetId": "1e6f-9461-56f8-abee", "type": "selectionEntry"}]
+                  }
+                ]
+              },
+              {
+                "name": "Sanarl Battleship",
+                "id": "3c2e-a5f8-c8dd-0454",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "model",
+                "categoryLinks": [{"id": "3c2e-a5f8-c8dd-0454-9491469f-4e1a-978c-e141-b7f12a6a7b91", "primary": true, "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91"}],
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "selectionEntries": [
+                  {
+                    "name": "Sanarl",
+                    "id": "d6d8-af05-e08b-8894",
+                    "collective": false,
+                    "hidden": false,
+                    "type": "upgrade",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 1
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                    "entryLinks": [{"id": "26a3-542c-e753-41d5", "hidden": false, "targetId": "1e6f-9461-56f8-abee", "type": "selectionEntry"}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cruiser Squadron",
+        "id": "de0dd40a-0073-4993-0e80-c8d3e73d8e22",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "de0dd40a-0073-4993-0e80-c8d3e73d8e22-25598bba-53b3-5db3-d582-e6b933204c73", "primary": true, "targetId": "25598bba-53b3-5db3-d582-e6b933204c73"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 2
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 3,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 800
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 1200
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 4,
+            "conditions": [
+              {
+                "childId": "any",
+                "field": "limit::points",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "roster",
+                "shared": true,
+                "type": "greaterThan",
+                "value": 1200
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "082d9be2-4b7e-ba3e-7736-df41944a469a",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Sulan Cruiser (Uses Rulak Profile Below)",
+                "id": "790500b0-9d62-9a7b-069d-c9a27d5c2a77",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "selectionEntries": [
+                  {
+                    "name": "Sulan",
+                    "id": "7c2252a0-8b33-b808-ce2d-1d733924b2c5",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 2
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 4
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                    "entryLinks": [{"id": "0a2b459c-5140-6db3-7c43-2086bc6c3a33", "hidden": false, "targetId": "c8d0-267f-c37d-3c6f", "type": "selectionEntry"}]
+                  }
+                ]
+              },
+              {
+                "name": "Rulak Cruiser",
+                "id": "6b56-b3c7-c556-e627",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "selectionEntries": [
+                  {
+                    "name": "Rulak",
+                    "id": "8c2e-c628-4303-e43e",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 2
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 4
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                    "entryLinks": [{"id": "d395-96ea-d99d-2521", "hidden": false, "targetId": "c8d0-267f-c37d-3c6f", "type": "selectionEntry"}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Frigate Squadron",
+        "id": "1d214934-1bf6-441e-55d3-84508502ef97",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "1d214934-1bf6-441e-55d3-84508502ef97-ab987c46-f204-0bf9-a6a9-8498c13509ee", "primary": true, "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 2
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 3,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 800
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 1200
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 5,
+            "conditions": [
+              {
+                "childId": "any",
+                "field": "limit::points",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "roster",
+                "shared": true,
+                "type": "greaterThan",
+                "value": 1200
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "176939da-e63c-9999-3d2e-4fe413e44fac",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Kurar Frigate",
+                "id": "7db4ecb5-bc06-3a85-cdcb-1ffca665fd23",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "unit",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "selectionEntries": [
+                  {
+                    "name": "Kurar",
+                    "id": "d0f45550-f6cd-d5ac-c9d8-8e04b80bd385",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 2
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 5
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                    "entryLinks": [{"id": "a901cba0-a4ae-fbd7-dd86-567b10b6a851", "hidden": false, "targetId": "283a-3905-b32d-edd2", "type": "selectionEntry"}]
+                  }
+                ]
+              },
+              {
+                "name": "Tarl Frigate (Uses Kurar Profile Below)",
+                "id": "1e24-fb2d-f0df-0f23",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "unit",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "selectionEntries": [
+                  {
+                    "name": "Tarl",
+                    "id": "3d06-4156-6d95-cf07",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 2
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 5
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                    "entryLinks": [{"id": "b5ad-96f9-bb2b-db73", "hidden": false, "targetId": "283a-3905-b32d-edd2", "type": "selectionEntry"}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sharedProfiles": [
+      {
+        "name": "Kurar",
+        "id": "717d0333-75cd-8e1a-180b-628f0b7cc85d",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Frigate", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "3", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "5", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "10", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "2", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "2", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "1", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "1", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "1", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "0", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Kurar_Weapon_I",
+        "id": "307dd6a2-d541-54a1-624c-b98811dc33ee",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore_Fixed", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "3", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "4", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "3", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "2", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Gravitational", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Kurar_Weapon_II",
+        "id": "ba4cf242-bec2-e8e0-979d-ca8b02ed8dcd",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "4", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "3", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "2", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "1", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Rulak",
+        "id": "f2611628-c96f-eabe-34cf-e7c5ff08815a",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Cruiser", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "4", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "6", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "8", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "5", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "4", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "2", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "3", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "1", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "1", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Rulak_Weapon_I",
+        "id": "a7211d81-c254-0053-e56f-672d563af35d",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore_Fixed", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "5", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "6", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "5", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "4", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Gravitational", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Rulak_Weapon_II",
+        "id": "ee1b7ea8-2aaa-c481-8518-87532ff18f45",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "5", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "5", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "5", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "5", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Rulak_Weapon_III",
+        "id": "1435e987-cae0-7de0-97a1-26a710fc5c9f",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "5", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "5", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "5", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "5", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Sanarl",
+        "id": "d3ede3ca-32f1-2c4f-88d7-e567e48d41e3",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Battleship", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "6", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "10", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "6", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "10", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "8", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "4", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "6", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "3", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "4", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "2", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Sanarl_Weapon_I",
+        "id": "9cf13844-fbae-a981-ad3e-671e39b36c86",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore_Fixed", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "8", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "9", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "8", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "6", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Gravitational", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Sanarl_Weapon_II",
+        "id": "3857c7d2-3e54-3ab8-1847-e4c1aae87e76",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "11", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "14", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "9", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "6", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Primary", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Sanarl_Weapon_III",
+        "id": "83671ee7-f697-5555-250e-226691410984",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "8", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "8", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "8", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "8", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Sanarl_Weapon_IV",
+        "id": "d1cde05f-cd72-a3dc-4c86-8b9223ec1e37",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "8", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "8", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "8", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "8", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      }
+    ],
+    "sharedRules": [
+      {
+        "name": "Difficult Target",
+        "id": "ffdced69-bd44-a3be-0ca3-6d30c958654b",
+        "description": "If a Capital Class model makes a ranged attack against a Difficult Target, their Attack Dice will suffer a -1 ‘to hit’ modifier. Most commonly, this will mean that their Attack Dice will only score hits on a 5 or 6.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "High Energy",
+        "id": "02b7e22e-6303-2ae7-6629-2dea903f6c46",
+        "description": "Coherence Effect - If all Weapons contributing to an Attack have the High Energy MAR and the attack equals or exceeds the target’s Damage Rating, the target gains a Hazard Marker in addition to any other effects.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Protected Systems",
+        "id": "6a883230-49bc-4bf6-f6bc-686986d6b80d",
+        "description": "Subtract 1 from any rolls on a Targeted Strike Damage Table resulting from Direct Weapon Attacks against a model with Protected Systems.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Self Repair",
+        "id": "46aa855e-e070-f3af-da7c-bbde6cf685f5",
+        "description": "If a model with Self Repair does not have a Cloaking Field activated, it may restore 1 lost Hull Point on a D6 roll of a 4, 5 or 6. This roll is made at the end of the model’s activation. A model may only attempt this once per Turn and it cannot be used to increase a model’s Hull Points beyond its starting total.",
+        "hidden": false,
+        "page": 0
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "Kurar",
+        "id": "283a-3905-b32d-edd2",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 30}],
+        "infoLinks": [
+          {"id": "8046-108d-ffb3-869a", "hidden": false, "targetId": "717d0333-75cd-8e1a-180b-628f0b7cc85d", "type": "profile"},
+          {"id": "8572-9594-0205-d9aa", "hidden": false, "targetId": "307dd6a2-d541-54a1-624c-b98811dc33ee", "type": "profile"},
+          {"id": "b051-5fca-fa5a-0391", "hidden": false, "targetId": "ffdced69-bd44-a3be-0ca3-6d30c958654b", "type": "rule"},
+          {"id": "c6f4-36b2-4a9d-16f4", "hidden": false, "targetId": "ba4cf242-bec2-e8e0-979d-ca8b02ed8dcd", "type": "profile"}
+        ]
+      },
+      {
+        "name": "Rulak",
+        "id": "c8d0-267f-c37d-3c6f",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 60}],
+        "infoLinks": [
+          {"id": "68bc-f5f2-0fd0-4309", "hidden": false, "targetId": "f2611628-c96f-eabe-34cf-e7c5ff08815a", "type": "profile"},
+          {
+            "id": "7a63-dee6-a29e-b4da",
+            "hidden": false,
+            "targetId": "1435e987-cae0-7de0-97a1-26a710fc5c9f",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "name",
+                "type": "set",
+                "value": "High_Energy",
+                "repeats": [
+                  {
+                    "childId": "77d3-cf47-3de8-363e",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "c8d0-267f-c37d-3c6f",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "f731-ca97-338f-7301", "hidden": false, "targetId": "a7211d81-c254-0053-e56f-672d563af35d", "type": "profile"},
+          {
+            "id": "28cb-f2a4-b24d-aec4",
+            "hidden": false,
+            "targetId": "ee1b7ea8-2aaa-c481-8518-87532ff18f45",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "name",
+                "type": "set",
+                "value": "High_Energy",
+                "repeats": [
+                  {
+                    "childId": "77d3-cf47-3de8-363e",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "c8d0-267f-c37d-3c6f",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Upgrades",
+            "id": "25ec-d5f1-2375-630d",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "High Energy Torpedoes",
+                "id": "77d3-cf47-3de8-363e",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "967d-c5eb-32ba-882e", "hidden": false, "targetId": "02b7e22e-6303-2ae7-6629-2dea903f6c46", "type": "rule"}]
+              },
+              {
+                "name": "Protected Systems",
+                "id": "8ac7-fbc7-7363-c50b",
+                "collective": true,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "03d4-4957-afd6-a1df", "hidden": false, "targetId": "6a883230-49bc-4bf6-f6bc-686986d6b80d", "type": "rule"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sanarl",
+        "id": "1e6f-9461-56f8-abee",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 190}],
+        "infoLinks": [
+          {
+            "id": "aa71-23f6-3cb6-84b1",
+            "hidden": false,
+            "targetId": "d3ede3ca-32f1-2c4f-88d7-e567e48d41e3",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "45a72717-f553-eda0-574a-ed9c863706e4",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "943d-cc57-d146-3517",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "1e6f-9461-56f8-abee",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "93537291-d3e3-5ccb-ec44-a5770b0a2a61",
+                "type": "increment",
+                "value": 2,
+                "repeats": [
+                  {
+                    "childId": "6f2e-826a-e559-1ea5",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "1e6f-9461-56f8-abee",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "3931-9b1e-5392-50a7", "hidden": false, "targetId": "3857c7d2-3e54-3ab8-1847-e4c1aae87e76", "type": "profile"},
+          {
+            "id": "d499-2588-67d0-1cf6",
+            "hidden": false,
+            "targetId": "d1cde05f-cd72-a3dc-4c86-8b9223ec1e37",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "name",
+                "type": "set",
+                "value": "High_Energy",
+                "repeats": [
+                  {
+                    "childId": "c215-1a04-75fa-3515",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "1e6f-9461-56f8-abee",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "a4f9-196e-ed12-0dac", "hidden": false, "targetId": "9cf13844-fbae-a981-ad3e-671e39b36c86", "type": "profile"},
+          {"id": "79c6-2223-dc65-cc6f", "hidden": false, "targetId": "6a883230-49bc-4bf6-f6bc-686986d6b80d", "type": "rule"},
+          {
+            "id": "131a-9da0-f01c-4cc6",
+            "hidden": false,
+            "targetId": "83671ee7-f697-5555-250e-226691410984",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "name",
+                "type": "set",
+                "value": "High_Energy",
+                "repeats": [
+                  {
+                    "childId": "c215-1a04-75fa-3515",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "1e6f-9461-56f8-abee",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Hardpoints",
+            "id": "d848-aa12-25f0-f485",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "+1 CR",
+                "id": "943d-cc57-d146-3517",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 10}]
+              },
+              {
+                "name": "+2 WC",
+                "id": "6f2e-826a-e559-1ea5",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+              },
+              {
+                "name": "Self Repair",
+                "id": "9a13-be4b-8c6c-7a78",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 15}],
+                "infoLinks": [{"id": "2bc2-a131-3265-4d8f", "hidden": false, "targetId": "46aa855e-e070-f3af-da7c-bbde6cf685f5", "type": "rule"}]
+              }
+            ]
+          },
+          {
+            "name": "Upgrades",
+            "id": "36f8-2fca-d1c6-9fbb",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "High Energy Torpedoes",
+                "id": "c215-1a04-75fa-3515",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "d926-a7c7-0cb3-e898", "hidden": false, "targetId": "02b7e22e-6303-2ae7-6629-2dea903f6c46", "type": "rule"}]
+              }
+            ]
+          },
+          {
+            "name": "Wings",
+            "id": "7179-0c7e-b2eb-c07f",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "maxPoints",
+                "field": "points",
+                "includeChildForces": false,
+                "includeChildSelections": true,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 20
+              }
+            ],
+            "entryLinks": [{"id": "9937-beb4-a5fa-0c27", "hidden": false, "targetId": "e1c4-5a93-e173-99cb", "type": "selectionEntryGroup"}],
+            "modifiers": [
+              {
+                "field": "maxPoints",
+                "type": "increment",
+                "value": 10,
+                "repeats": [
+                  {
+                    "childId": "6f2e-826a-e559-1ea5",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "1e6f-9461-56f8-abee",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sharedSelectionEntryGroups": [
+      {
+        "name": "SRS Tokens",
+        "id": "e1c4-5a93-e173-99cb",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Support Shuttle Token",
+            "id": "5172-695e-41d2-9976",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "profiles": [
+              {
+                "name": "(SRS) Support Shuttle",
+                "id": "c737-6a19-14c2-9e90",
+                "hidden": false,
+                "typeId": "2cf1-c9ab-3840-931a",
+                "typeName": "SRS Token",
+                "characteristics": [
+                  {"name": "Mv", "$text": "8\"", "typeId": "51cd-7087-6fe8-3c61"},
+                  {"name": "AD", "$text": "0", "typeId": "15fb-fff8-6d89-0c16"},
+                  {"name": "PD", "$text": "0", "typeId": "5129-5f00-6506-3ce6"},
+                  {"name": "AP", "$text": "0", "typeId": "4474-acef-601d-d3ec"},
+                  {"name": "Token Size", "$text": "Large", "typeId": "ee90-104e-254a-ac33"}
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "f3d3-1051-9d22-9733",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Support Shuttle",
+                    "id": "fa41-2580-25c5-cb28",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Assault Shuttle Token",
+            "id": "9ef2-2e62-2f17-8f2b",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "profiles": [
+              {
+                "name": "(SRS) Assault Shuttle",
+                "id": "ea8c-229d-4826-9831",
+                "hidden": false,
+                "typeId": "2cf1-c9ab-3840-931a",
+                "typeName": "SRS Token",
+                "characteristics": [
+                  {"name": "Mv", "$text": "8\"", "typeId": "51cd-7087-6fe8-3c61"},
+                  {"name": "AD", "$text": "0", "typeId": "15fb-fff8-6d89-0c16"},
+                  {"name": "PD", "$text": "1", "typeId": "5129-5f00-6506-3ce6"},
+                  {"name": "AP", "$text": "2", "typeId": "4474-acef-601d-d3ec"},
+                  {"name": "Token Size", "$text": "Large", "typeId": "ee90-104e-254a-ac33"}
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "fab1-ad39-8645-e790",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Assault Shuttle",
+                    "id": "2667-3649-ef30-1884",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Bomber Token",
+            "id": "2dde-ab38-4bbb-3e5f",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "profiles": [
+              {
+                "name": "(SRS) Bomber",
+                "id": "5d4a-7644-1d87-cdc8",
+                "hidden": false,
+                "typeId": "2cf1-c9ab-3840-931a",
+                "typeName": "SRS Token",
+                "characteristics": [
+                  {"name": "Mv", "$text": "12\"", "typeId": "51cd-7087-6fe8-3c61"},
+                  {"name": "AD", "$text": "3", "typeId": "15fb-fff8-6d89-0c16"},
+                  {"name": "PD", "$text": "1", "typeId": "5129-5f00-6506-3ce6"},
+                  {"name": "AP", "$text": "0", "typeId": "4474-acef-601d-d3ec"},
+                  {"name": "Token Size", "$text": "Large", "typeId": "ee90-104e-254a-ac33"}
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "1334-ada9-81cc-c3b3",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Bomber",
+                    "id": "20a6-acee-4efc-ed05",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fighter Token",
+            "id": "13d6-9f39-d47b-ad38",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "profiles": [
+              {
+                "name": "(SRS) Fighter",
+                "id": "a40d-ce7b-7716-dc30",
+                "hidden": false,
+                "typeId": "2cf1-c9ab-3840-931a",
+                "typeName": "SRS Token",
+                "characteristics": [
+                  {"name": "Mv", "$text": "18\"", "typeId": "51cd-7087-6fe8-3c61"},
+                  {"name": "AD", "$text": "2", "typeId": "15fb-fff8-6d89-0c16"},
+                  {"name": "PD", "$text": "1", "typeId": "5129-5f00-6506-3ce6"},
+                  {"name": "AP", "$text": "0", "typeId": "4474-acef-601d-d3ec"},
+                  {"name": "Token Size", "$text": "Small", "typeId": "ee90-104e-254a-ac33"}
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "78e6-0598-04bd-6c31",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Fighter",
+                    "id": "e5fc-d7c7-59c6-b4c7",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Interceptor Token",
+            "id": "7cd6-d400-bf2f-c263",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "profiles": [
+              {
+                "name": "(SRS) Interceptor",
+                "id": "9466-c62a-8c12-e75c",
+                "hidden": false,
+                "typeId": "2cf1-c9ab-3840-931a",
+                "typeName": "SRS Token",
+                "characteristics": [
+                  {"name": "Mv", "$text": "12\"", "typeId": "51cd-7087-6fe8-3c61"},
+                  {"name": "AD", "$text": "0", "typeId": "15fb-fff8-6d89-0c16"},
+                  {"name": "PD", "$text": "2", "typeId": "5129-5f00-6506-3ce6"},
+                  {"name": "AP", "$text": "0", "typeId": "4474-acef-601d-d3ec"},
+                  {"name": "Token Size", "$text": "Small", "typeId": "ee90-104e-254a-ac33"}
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "f6a6-9b82-d5bf-646f",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Interceptor",
+                    "id": "5d79-b892-90c5-7dff",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,3075 @@
+{
+  "catalogue": {
+    "name": "Sorylian Invasion Fleet",
+    "id": "0886-17b3-5366-4406",
+    "authorContact": "steve_990@hotmail.com",
+    "authorName": "Steve_990",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "417a1fa3-3f8e-7789-d5ec-a4ebd35323cd",
+    "gameSystemRevision": 1,
+    "revision": 6,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
+    "publications": [{"name": "Defence Platform PDF", "id": "0886-17b3-pub1"}],
+    "rules": [
+      {
+        "name": "Sorylian Fleet Statistics",
+        "id": "ad90f4ee-8cad-2892-623f-dd60740eaa80",
+        "description": "Fleet Tactics Bonus: 1\nCommand Distance: 7\"",
+        "hidden": false,
+        "page": 0
+      }
+    ],
+    "selectionEntries": [
+      {
+        "name": "Assault Cruiser Squadron",
+        "id": "27bc-faec-659d-df1e",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "27bc-faec-659d-df1e-25598bba-53b3-5db3-d582-e6b933204c73", "primary": true, "targetId": "25598bba-53b3-5db3-d582-e6b933204c73"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 800
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 1200
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 3,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 1200
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 2000
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "fc12-3787-7c27-b08a",
+            "collective": false,
+            "defaultSelectionEntryId": "2c87-e03a-25ce-aacb",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Katar Assault Cruiser",
+                "id": "2c87-e03a-25ce-aacb",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "selectionEntries": [
+                  {
+                    "name": "Katar",
+                    "id": "eb8d-3be6-383e-c775",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 2
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 3
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                    "entryLinks": [{"id": "5a81-5861-7d37-09ed", "hidden": false, "targetId": "f274-b5c4-a274-219a", "type": "selectionEntry"}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Battlecruiser",
+        "id": "1a8a338f-dafb-62b1-4c3e-9537c3ea1635",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "1a8a338f-dafb-62b1-4c3e-9537c3ea1635-9491469f-4e1a-978c-e141-b7f12a6a7b91", "primary": true, "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "any",
+                "field": "limit::points",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "roster",
+                "shared": true,
+                "type": "greaterThan",
+                "value": 1200
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "5938f121-6652-639e-03b5-0aea66f4ac69",
+            "collective": false,
+            "defaultSelectionEntryId": "9fdd-fb3a-9268-549b",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Amentum Battlecruiser",
+                "id": "9fdd-fb3a-9268-549b",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [
+                  {
+                    "id": "b08e-99dc-2148-ec5e",
+                    "hidden": false,
+                    "targetId": "2ead-bbe4-0171-afb1",
+                    "type": "selectionEntryGroup",
+                    "modifiers": [
+                      {
+                        "field": "hidden",
+                        "type": "set",
+                        "value": true,
+                        "conditions": [
+                          {
+                            "childId": "91b7-b7c4-6d45-aaa0",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "9fdd-fb3a-9268-549b",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 2
+                          }
+                        ]
+                      },
+                      {
+                        "field": "minSelections",
+                        "type": "set",
+                        "value": 0,
+                        "repeats": [
+                          {
+                            "childId": "91b7-b7c4-6d45-aaa0",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "repeats": 1,
+                            "roundUp": false,
+                            "scope": "9fdd-fb3a-9268-549b",
+                            "shared": true,
+                            "value": 2
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "name": "Amentum",
+                    "id": "91b7-b7c4-6d45-aaa0",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 2
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                    "entryLinks": [{"id": "96f6-c2c9-10f5-c7fa", "hidden": false, "targetId": "73f4-2b3a-ceca-9f88", "type": "selectionEntry"}],
+                    "modifiers": [
+                      {
+                        "field": "maxSelections",
+                        "type": "decrement",
+                        "value": 1,
+                        "conditions": [
+                          {
+                            "childId": "any",
+                            "field": "limit::points",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "roster",
+                            "shared": true,
+                            "type": "atMost",
+                            "value": 800
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Frigate Squadron",
+        "id": "4e5f826f-01f8-c3dc-96f6-92d891dadc98",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "4e5f826f-01f8-c3dc-96f6-92d891dadc98-ab987c46-f204-0bf9-a6a9-8498c13509ee", "primary": true, "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 3
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 1200
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 2000
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "ad1fc659-593f-dd04-ef04-114e667135b0",
+            "collective": false,
+            "defaultSelectionEntryId": "80ef-36c5-202d-a03d",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Corvus Frigate",
+                "id": "80ef-36c5-202d-a03d",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "unit",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "selectionEntries": [
+                  {
+                    "name": "Corvus",
+                    "id": "00d3-4773-bcf7-da18",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 3
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 5
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                    "entryLinks": [{"id": "2f9c-ce92-3554-dbbc", "hidden": false, "targetId": "fcf8-2380-b7d5-3884", "type": "selectionEntry"}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sorylian Escort",
+        "id": "d878b0b3-0bf2-0cbe-ef5b-03926c0670f8",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "upgrade",
+        "categoryLinks": [{"id": "d878b0b3-0bf2-0cbe-ef5b-03926c0670f8-ee40567b-ddc7-be95-1cbc-def74dd8ce71", "primary": true, "targetId": "ee40567b-ddc7-be95-1cbc-def74dd8ce71"}],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "entryLinks": [{"id": "1911d2bc-9d42-643b-673c-8808bdefae62", "hidden": false, "targetId": "929b5f59-dde7-4341-9a89-0571bcb33d82", "type": "selectionEntry"}]
+      }
+    ],
+    "sharedProfiles": [
+      {
+        "name": "Amentum",
+        "id": "b8bc-f89c-221b-53e9",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Battlecruiser", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "5", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "9", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "8", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "5", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "6", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "5", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "6", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "2", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "2", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Amentum_Weapon_I",
+        "id": "a63e-09b5-f369-1182",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore_Fixed", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "8", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "9", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "3", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Scatter", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Amentum_Weapon_II",
+        "id": "92de-776c-8320-b2dc",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "6", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "7", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "7", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "7", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Corvus",
+        "id": "0a3f-6878-bbe5-4c0f",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Frigate", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "4", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "6", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "12", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "2", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "2", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "1", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "2", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "1", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "0", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Falcata",
+        "id": "0e7bfc8a-ed96-c86b-c6c0-decf5379d643",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Cruiser", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "4", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "7", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "10", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "4", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "5", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "4", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "3", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "1", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Falcata_Weapon_I",
+        "id": "b0b5b688-887e-1384-6e1c-9ba7301f3461",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "6", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "8", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "3", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Scatter", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Falcata_Weapon_II",
+        "id": "1ab810a2-576a-09cf-ae17-cbddc55f4e02",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore_Fixed", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "4", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "6", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "1", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Scatter", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Falcata_Weapon_III",
+        "id": "b73b4868-7c47-53c3-96a7-4a216cf4b3a6",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "2", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "4", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "4", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "4", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Harvester",
+        "id": "b443-ab21-3496-3dea",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Gunship", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "4", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "7", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "9", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "4", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "4", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "2", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "3", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "1", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Harvester_Weapon_I",
+        "id": "4ca5-5a7a-ffa7-b71b",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "3", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "4", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "1", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Scatter", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Harvester_Weapon_II",
+        "id": "410a-8355-8b57-f9b1",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore_Fixed", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "5", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "7", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "3", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "1", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Kinetic", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Katar",
+        "id": "ea24-c86b-0ebd-f181",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Assault_Cruiser", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "5", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "8", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "9", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "4", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "4", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "5", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "4", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "1", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "1", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Katar_Weapon_I",
+        "id": "308a-09eb-be6e-72ae",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore_Fixed", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "4", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "6", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "1", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Scatter", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Kontos",
+        "id": "5c9b-128e-a17d-d6ee",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Escort", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "3", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "5", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "9", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "2", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "2", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "1", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "4", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "0", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      }
+    ],
+    "sharedRules": [
+      {
+        "name": "Agile",
+        "id": "9b78-d638-0930-95aa",
+        "description": "An Agile model (or SRS Token) can re-roll a failed Manoeuvre Test.\nThe second result must be accepted.",
+        "hidden": false
+      },
+      {
+        "name": "Ambush",
+        "id": "fff6c77f-e096-19b7-b5c4-bc6919e90602",
+        "description": "A Squadron with the Ambush MAR may be deployed using the Hidden Set-Up rules.\nHowever, rather than only having one Hidden Set-Up Marker, you may place a number of Markers equal to the value of this MAR on the Board. Only one of these Markers has the Squadron name recorded on it, the others are left blank. When a blank Marker is revealed, nothing happens – the Marker is simply discarded.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Assault Blitz",
+        "id": "d78d-bd29-9e71-d8b2",
+        "description": "When compiling an Anti-Boarding dice pool against a Boarding Assault from one or more model’s with Assault Blitz, the total Point Defense pool of all models and tokens contributing to the defense (including the target) is reduced by HALF, after Firing Options but before it is added to the target’s Assault Points.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Bigger Batteries",
+        "id": "6b467311-133d-9923-ce42-e6dbaeb2801e",
+        "description": "The Point Defense systems on a model with Bigger Batteries have a Range of 8” instead of 4”. This also increases the range of Attacks using the Point Defense Barrage MAR.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Biohazard",
+        "id": "bf88112a-c418-e026-2257-5293d0113b4b",
+        "description": "Coherence Effect - If ALL Weapons contributing to an Attack have Biohazard Ammo, and the number of hits equals or exceeds the Damage Rating (DR) of the target model, the target model loses 1 Crew Point, in addition to any other effects.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Corrosive",
+        "id": "fc29e42a-25f1-e2f7-4518-5f3cbf34f829",
+        "description": "Coherence Effect - If ALL weapons contributing to an attack are Corrosive and the Attack exceeds the target’s Damage Rating, the target model gains a Corroded Marker.\n\nA Repair Attempt MUST be made to remove each Corroded Marker that a model carries during the End Phase of each Turn, on a 4, 5 or 6 the attempt succeeds and the Marker is removed, on a 1, 2 or 3 the attempt fails, the Marker remains and the model loses one Hull Point.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Decimator Warheads",
+        "id": "b257-33b3-8871-e8b7",
+        "description": "Coherence Effect - If all Weapons contributing to an Attack have the Decimator Warheads MAR and the Attack equals or exceeds the target’s CR, the target Squadron must take an immediate Disorder Check.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Deck Crews",
+        "id": "d915c857-ccec-5dd5-2088-d443d4dfe98b",
+        "description": "A model with Deck Crew may roll a D6 during the Command Segment of its activation. On a result of 4, 5 or 6 take ONE previously Destroyed Wing and return it to a SRS Token that is currently on this model. The model’s maximum Wing complement and the maximum number of Wings in a SRS Token CANNOT be exceeded.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Difficult Target",
+        "id": "686e26e1-10de-0786-d58d-1e6cd845be09",
+        "description": "If a Capital Class model makes a ranged attack against a Difficult Target, their Attack Dice will suffer a -1 ‘to hit’ modifier. Most commonly, this will mean that their Attack Dice will only score hits on a 5 or 6.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Durable",
+        "id": "40f1-69d0-f6c9-0e51",
+        "description": "Reduce the AD pool for an SRS attack run against the model with this MAR by half of the number of wings in the flight (rounding up).",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Elite Crew",
+        "id": "11e09a6e-4dad-3c8b-7f79-8dbc0e4f24eb",
+        "description": "A model with Elite Crew receives a +1 ‘to hit’ modifier on all dice rolled to take Command Checks. When a Squadron (rather than a particular model) takes a Command Check, unless all models within the Squadron have this MAR, the effect is lost. Escort Type models are ignored for this purpose. This does not effect Command Tests taken for Hidden Set-Up.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Experienced Engineers",
+        "id": "d7e6d673-f418-01f5-c382-b171ed6b09f9",
+        "description": "The Damage Repair Tests of a model with Experienced Engineers are successful on a 3, 4, 5 or 6.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Hidden Killer",
+        "id": "51b8ca52-479d-c288-f542-2f183ea5b8ea",
+        "description": "A Hidden Killer CANNOT be targeted by ANY weapons firing from further than 20” if it is at a Full Stop.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Impervious",
+        "id": "aadd75bb-7964-bfed-c81a-0b68de0e9da8",
+        "description": "To Capture a model with Impervious, a Boarding Assault must roll successes equal to or in excess of TRIPLE the model’s current Crew Point total.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Kinetic Weapons",
+        "id": "341bd34e-d2c7-a3b2-8f7e-6605b3938beb",
+        "description": "Coherence Effect - If ALL weapons involved in the attack are Kinetic weapons and the attack equals or exceeds the target’s Critical Rating, the attacker may add +1 to the result of the roll on the critical hit table. If the Attack causes multiple Critical Hits, you may choose separately for each roll on the Critical Hit Table made.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Launch Tubes",
+        "id": "4bb27159-c138-8035-6ad7-9c3450639081",
+        "description": "A model with Launch Tubes can initiate a Boarding Assault against a target within 12”.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Maneuverable",
+        "id": "b21cdaaa-846d-dd0d-f287-027d675ea297",
+        "description": "If a Maneuverable model is at a Full Stop, it can rotate up to 90 degrees around its Flight Peg during the Secondary Movement segment of its activation.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "No FSD",
+        "id": "64cdd759-92bd-ba9f-c3da-5d2533b369c0",
+        "description": "A model with No FSD CANNOT perform a Fold Space Escape, or deploy using Shunt Deployment.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Nuclear Weapons",
+        "id": "d3c4ed5f-fe24-50bf-5c83-085406a76141",
+        "description": "Coherence Effect - If ALL weapons involved in an attack are Nuclear Weapons and the attack causes a Critical Hit, every model whose Flight Peg is within 4” of the target’s Flight Peg suffers an attack with HALF the Attack Dice of the initial attack.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Orbit",
+        "id": "1a53-a50a-df00-a1b5",
+        "description": "May be deployed in orbit (within 4”) of a planet, planetoid or Battle Station within the player’s Deployment Zone facing any direction. When Orbiting not subject to move by effects (Gravitational Weapons, slingshots etc.)",
+        "hidden": false,
+        "page": 1,
+        "publicationId": "0886-17b3-pub1"
+      },
+      {
+        "name": "Pack Hunters",
+        "id": "d7ba7998-32aa-1717-385d-5772c4e04522",
+        "description": "If ALL models contributing to an Attack are Pack Hunters, add +1 Attack Dice (AD) to the Attack for each additional model, after the first, contributing to it. Additional Dice for Pack Hunters are added to the final pool, AFTER Firing Options. The maximum bonus to any attack from the Pack Hunters Model Assigned Rule is +2.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Planetfall",
+        "id": "c4ec-e3e4-82c1-54a4",
+        "description": "Additional effects in an invasion scenario (these will be detailed in the specific scenario). Does not count towards your minimum tier requirements for fleet  building, though they do take up the appropriate slot in the relevant Tier of your fleet building table.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Point Defense Barrage",
+        "id": "7e57919e-da92-4bb7-1f42-d08a1a428764",
+        "description": "A model with Point Defense Barrage can use its Point Defense systems to Attack non-Capital Class models during its Squadron Activation, as if it were a Scatter Weapon System. This Attack follows the normal Attack procedure, requiring Line of Sight and so on.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Precision Strike",
+        "id": "a6f2563b-43c4-e6cf-915c-09f8c3d280dc",
+        "description": "Coherence Effect - If ALL weapons contributing to a Targeted Strike have Precision Strike, you may choose to add +1 to the result on the Targeted Strike Damage Table.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Protected Systems",
+        "id": "91451e8f-64f5-4040-4204-1662016a85f9",
+        "description": "Subtract 1 from any rolls on a Targeted Strike Damage Table resulting from Direct Weapon Attacks against a model with Protected Systems.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Quick Launch",
+        "id": "b6a52256-64d2-6a56-c85b-780f54ebc6da",
+        "description": "When Launched from a Carrier with Quick Launch, SRS Tokens may be placed anywhere within the Carrier’s Command Distance, they are not restricted to being placed in contact with it.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Reinforced (Starboard/Port)",
+        "id": "c4ab97a7-8ac0-aadb-af9b-df38dd010b66",
+        "description": "A Reinforced model receives +1 to its Critical Rating (CR) against any attack, if the Flight Pegs of all firing models contributing to the attack are entirely within the target model’s listed arc.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Scatter Weapons",
+        "id": "70439c65-301a-1b06-7d66-6d24a4287e2d",
+        "description": "Coherence Effect - If ALL weapons involved in the attack are Scatter Weapons and the target is within 16” of all weapons taking part in the attack, the Attack Dice ALWAYS cause successes on rolls 4, 5 or 6 (or better).\nThis effect does NOT apply if the Weapon is being used to make a Targeted Strike, the nature of a Scatter System is ill suited to precision strikes on a specific area of a ship.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Scout",
+        "id": "744ea45b-27fa-0cd5-a1e7-57fe54afa056",
+        "description": "The Fleet with the most models with the Scout Model Assigned Rule can redeploy any one of its Squadrons after all Squadrons have been deployed on the Game Board.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Second Assault",
+        "id": "99f4f332-0d22-e6fa-0eeb-86bad17a288a",
+        "description": "A model with the Second Assault MAR may launch TWO Boarding Assaults during a game, rather than one.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Self Repair",
+        "id": "c921ffd0-5775-6840-e505-d8d3cde97f42",
+        "description": "If a model with Self Repair does not have a Cloaking Field activated, it may restore 1 lost Hull Point on a D6 roll of a 4, 5 or 6. This roll is made at the end of the model’s activation. A model may only attempt this once per Turn and it cannot be used to increase a model’s Hull Points beyond its starting total.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Shunt Matrix",
+        "id": "1cc5a85e-4477-f0ff-cd89-d159ac506691",
+        "description": "During the Secondary Movement Segment of its activation, a model with the Shunt Matrix MAR may declare that it is going to perform a Battle Shunt.\n\nTo make a Battle Shunt, the controlling player must first declare the direction and final orientation of the model that is about to perform the Battle Shunt. The final orientation must be a direction; it is not acceptable to declare a particular target to be a model's orientation after a Battle Shunt.\nThe model must choose a number of D6 between 2 and the Value of its Shunt Matrix MAR. These dice should then be rolled.\n\nThe sum of all of the dice rolled determines the exact distance in Inches that the model must move in a straight line in the direction that it previously declared. Once the model has moved it must be placed in the orientation that was previously declared.\n\nBattle Shunt movement ignores the rules of intervening terrain and Mines. A model can declare any other Secondary Movement actions after a Battle Shunt.\n\nA model can make attacks normally after making a Battle Shunt, and can perform a Boarding Assault.\n\nImportant Note: the Dice rolled to determine how far a model using Shunt Matrix moves does NOT use the Exploding Dice mechanic.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Split Fire",
+        "id": "2d7428db-1d47-e164-3f59-6f0bd700031f",
+        "description": "A Weapon with the Split Fire MAR may declare an Attack against any number of targets in its Arc of Fire and a single Attack Dice Range Band. It must divide its Attack Dice as evenly as possible between these Attacks. This cannot be used in conjunction with any Firing Options.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Stealth Systems",
+        "id": "f7566514-8063-bbcb-d114-09a2e10df5ab",
+        "description": "Any Attack against a model with the Stealth Systems MAR must re-roll ALL successful rolls if any weapon in the Attack is firing from further than 20”. This re-roll is performed BEFORE any extra rolls for Exploding Dice, and before Hits are discounted by Shield Systems or Point Defense. Only ONE dice is re-rolled for any 6’s scored. The second result MUST be accepted.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "System Network",
+        "id": "aa3c1581-6364-8e50-d741-37f0d67f0515",
+        "description": "If a model with Systems Network is within the Command Distance of a friendly model with an active Cloaking Field that also has System Network, this model automatically gains the Stealth Systems MAR.\nThe effects of multiple Cloaking Fields are not cumulative. A model using Systems Network to gain Stealth Systems cannot then pass the Stealth Systems on to other models with Systems Network.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Weapon Shielding",
+        "id": "9ef899ec-0148-1930-06d9-cea2b87ecf5b",
+        "description": "A model with the Weapon Shielding MAR only reduces the Attack Dice values of its Weapon Systems by ONE for every TWO points of Hull Damage it has suffered.",
+        "hidden": false,
+        "page": 0
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "Amentum",
+        "id": "73f4-2b3a-ceca-9f88",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 90}],
+        "infoLinks": [
+          {"id": "f3d4-afc8-af03-c179", "hidden": false, "targetId": "d7e6d673-f418-01f5-c382-b171ed6b09f9", "type": "rule"},
+          {"id": "8c1c-776f-92d9-211d", "hidden": false, "targetId": "70439c65-301a-1b06-7d66-6d24a4287e2d", "type": "rule"},
+          {
+            "id": "7aca-c033-8888-5547",
+            "hidden": false,
+            "targetId": "a63e-09b5-f369-1182",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "name",
+                "type": "set",
+                "value": "Kinetic",
+                "repeats": [
+                  {
+                    "childId": "aa36-eb9d-a03a-d544",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "73f4-2b3a-ceca-9f88",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "name",
+                "type": "set",
+                "value": "12\"",
+                "repeats": [
+                  {
+                    "childId": "aa36-eb9d-a03a-d544",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "73f4-2b3a-ceca-9f88",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "683c-8959-67bd-b70c", "hidden": false, "targetId": "92de-776c-8320-b2dc", "type": "profile"},
+          {
+            "id": "da87-f567-55c2-2fec",
+            "hidden": false,
+            "targetId": "b8bc-f89c-221b-53e9",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "37d832b5-effe-31e5-3d80-be0e0f0facaa",
+                "type": "increment",
+                "value": 2,
+                "repeats": [
+                  {
+                    "childId": "7fdb-fe9a-a014-6239",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "73f4-2b3a-ceca-9f88",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "3445-ce6a-1c0d-73e8",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "73f4-2b3a-ceca-9f88",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "12cafa00-4b8f-fce7-d690-eb7a2d7be421",
+                "type": "increment",
+                "value": 3,
+                "repeats": [
+                  {
+                    "childId": "4202-872c-0693-a754",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "73f4-2b3a-ceca-9f88",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "450d4be0-47db-8bc4-b15b-118250ac9615",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "c4b9-0169-b6ea-0066",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "73f4-2b3a-ceca-9f88",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "4f478de8-54c8-4f22-5cbc-6b00963ccce1",
+                "type": "decrement",
+                "value": 2,
+                "repeats": [
+                  {
+                    "childId": "2c26-6a8c-5819-25cd",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "73f4-2b3a-ceca-9f88",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "0e7d-c890-902f-c52f", "hidden": false, "targetId": "341bd34e-d2c7-a3b2-8f7e-6605b3938beb", "type": "rule"},
+          {
+            "id": "1a61-6738-eca2-4e5f",
+            "hidden": false,
+            "targetId": "40f1-69d0-f6c9-0e51",
+            "type": "rule",
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "7fdb-fe9a-a014-6239",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "73f4-2b3a-ceca-9f88",
+                    "shared": true,
+                    "type": "equalTo",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "c38f-2078-2226-5dce", "hidden": false, "targetId": "c4ab97a7-8ac0-aadb-af9b-df38dd010b66", "type": "rule"},
+          {"id": "ff39-294e-c603-9b0e", "hidden": false, "targetId": "c4ec-e3e4-82c1-54a4", "type": "rule"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Hardpoints",
+            "id": "10d9-93a1-4069-d2f5",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "maxSelections",
+                "type": "increment",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "4793-6f89-6883-aada",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "10d9-93a1-4069-d2f5",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "+2 Mv, remove Durable",
+                "id": "7fdb-fe9a-a014-6239",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+              },
+              {
+                "name": "+3 AP",
+                "id": "4202-872c-0693-a754",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+              },
+              {
+                "name": "+1 HP",
+                "id": "3445-ce6a-1c0d-73e8",
+                "collective": true,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 10}]
+              },
+              {
+                "name": "-1 TL",
+                "id": "c4b9-0169-b6ea-0066",
+                "collective": true,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Planetfall",
+                "id": "34d3-fbee-1bd8-54e7",
+                "collective": false,
+                "defaultSelectionEntryId": "4793-6f89-6883-aada",
+                "hidden": false,
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "name": "Planetfall(4)",
+                    "id": "4793-6f89-6883-aada",
+                    "collective": true,
+                    "hidden": false,
+                    "type": "upgrade",
+                    "constraints": [
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 1
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+                  },
+                  {
+                    "name": "Planetfall(5), -2 PD",
+                    "id": "2c26-6a8c-5819-25cd",
+                    "collective": true,
+                    "hidden": false,
+                    "type": "upgrade",
+                    "constraints": [
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 1
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Upgrades",
+            "id": "712b-85a9-6751-1029",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Weapon Shielding MAR",
+                "id": "4e92-9d12-f4a7-a082",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "e7d8-f01d-806d-7a9b", "hidden": false, "targetId": "9ef899ec-0148-1930-06d9-cea2b87ecf5b", "type": "rule"}]
+              },
+              {
+                "name": "Bigger Batteries",
+                "id": "a1e4-35a4-ea13-1d49",
+                "collective": true,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "33d5-9ce6-e566-7ece", "hidden": false, "targetId": "6b467311-133d-9923-ce42-e6dbaeb2801e", "type": "rule"}]
+              },
+              {
+                "name": "Upgrade Scatter Weapons to Kinetic",
+                "id": "aa36-eb9d-a03a-d544",
+                "collective": true,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Corvus",
+        "id": "fcf8-2380-b7d5-3884",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 20}],
+        "infoLinks": [
+          {"id": "40b4-3a2f-16f4-6c49", "hidden": false, "targetId": "686e26e1-10de-0786-d58d-1e6cd845be09", "type": "rule"},
+          {
+            "id": "fa6a-10e8-c81c-6800",
+            "hidden": false,
+            "targetId": "0a3f-6878-bbe5-4c0f",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "4f478de8-54c8-4f22-5cbc-6b00963ccce1",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "af27-fbf4-a55e-1c48",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "fcf8-2380-b7d5-3884",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "b221-6cd9-f3ae-7862", "hidden": false, "targetId": "40f1-69d0-f6c9-0e51", "type": "rule"},
+          {"id": "189b-c058-33f6-365d", "hidden": false, "targetId": "c4ec-e3e4-82c1-54a4", "type": "rule"}
+        ],
+        "selectionEntries": [
+          {
+            "name": "Planetfall(1)",
+            "id": "047d-db4c-9b52-7580",
+            "collective": true,
+            "hidden": false,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Upgrades",
+            "id": "927c-3261-ab76-0c61",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "+1 PD",
+                "id": "af27-fbf4-a55e-1c48",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Falcata",
+        "id": "2480-7578-f4eb-54b1",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 60}],
+        "infoLinks": [
+          {"id": "016f-cffa-c1f8-1abc", "hidden": false, "targetId": "b73b4868-7c47-53c3-96a7-4a216cf4b3a6", "type": "profile"},
+          {"id": "63fe-a982-9748-d579", "hidden": false, "targetId": "1ab810a2-576a-09cf-ae17-cbddc55f4e02", "type": "profile"},
+          {
+            "id": "e564-4a5e-16a0-34c9",
+            "hidden": false,
+            "targetId": "0e7bfc8a-ed96-c86b-c6c0-decf5379d643",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "0068d495-66ca-6446-f906-63ed81c88477",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "4733-26d9-def3-56d6",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "2480-7578-f4eb-54b1",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "37d832b5-effe-31e5-3d80-be0e0f0facaa",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "0a05-dc6b-7612-5287",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "2480-7578-f4eb-54b1",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "8ada-5bf3-079b-6b13", "hidden": false, "targetId": "b0b5b688-887e-1384-6e1c-9ba7301f3461", "type": "profile"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Hardpoints",
+            "id": "3fc4-3519-de5e-32b9",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "+1 Shield",
+                "id": "4733-26d9-def3-56d6",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 10}]
+              },
+              {
+                "name": "+1\" Mv",
+                "id": "0a05-dc6b-7612-5287",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+              }
+            ]
+          },
+          {
+            "name": "Upgrades",
+            "id": "3402-7aee-fbe8-7d63",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Experienced Engineers",
+                "id": "5262-c708-4c8e-532a",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "a329-c8b2-ab50-c783", "hidden": false, "targetId": "d7e6d673-f418-01f5-c382-b171ed6b09f9", "type": "rule"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Harvester",
+        "id": "b4d5-47fe-6084-2c56",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 50}],
+        "infoLinks": [
+          {"id": "8b50-80e9-00c4-cdec", "hidden": false, "targetId": "c4ab97a7-8ac0-aadb-af9b-df38dd010b66", "type": "rule"},
+          {
+            "id": "6a76-e0c6-f18c-c5ac",
+            "hidden": false,
+            "targetId": "b443-ab21-3496-3dea",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "0068d495-66ca-6446-f906-63ed81c88477",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "f174-0347-e31b-9b79",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "b4d5-47fe-6084-2c56",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "12cafa00-4b8f-fce7-d690-eb7a2d7be421",
+                "type": "increment",
+                "value": 2,
+                "repeats": [
+                  {
+                    "childId": "3d9e-7881-4daf-660c",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "b4d5-47fe-6084-2c56",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "a168-b9c1-9cd7-dfea", "hidden": false, "targetId": "4ca5-5a7a-ffa7-b71b", "type": "profile"},
+          {
+            "id": "8878-a6f9-ef38-4377",
+            "hidden": false,
+            "targetId": "410a-8355-8b57-f9b1",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "name",
+                "type": "set",
+                "value": "Decimator_Warheads",
+                "repeats": [
+                  {
+                    "childId": "18df-293f-16ba-d807",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "b4d5-47fe-6084-2c56",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Upgrades",
+            "id": "64b6-4de7-cdf8-30f5",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Decimator Warheads",
+                "id": "18df-293f-16ba-d807",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "d5b6-dfee-cfd3-75c1", "hidden": false, "targetId": "b257-33b3-8871-e8b7", "type": "rule"}]
+              },
+              {
+                "name": "Pack Hunters",
+                "id": "c2dc-a5b9-9bd4-4664",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "b81e-b348-ed55-5e6a", "hidden": false, "targetId": "d7ba7998-32aa-1717-385d-5772c4e04522", "type": "rule"}]
+              }
+            ]
+          },
+          {
+            "name": "Hardpoints",
+            "id": "418a-84d1-5d6c-ed8c",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "+1 Shield",
+                "id": "f174-0347-e31b-9b79",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 10}]
+              },
+              {
+                "name": "+2 AP",
+                "id": "3d9e-7881-4daf-660c",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Katar",
+        "id": "f274-b5c4-a274-219a",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 50}],
+        "infoLinks": [
+          {
+            "id": "116b-f068-ddc5-000c",
+            "hidden": false,
+            "targetId": "ea24-c86b-0ebd-f181",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "37d832b5-effe-31e5-3d80-be0e0f0facaa",
+                "type": "increment",
+                "value": 2,
+                "repeats": [
+                  {
+                    "childId": "3f27-05d3-85a5-22d0",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "f274-b5c4-a274-219a",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "4982-6d6b-cbf3-f7df", "hidden": false, "targetId": "308a-09eb-be6e-72ae", "type": "profile"},
+          {"id": "4302-7cdd-5f2c-ceaa", "hidden": false, "targetId": "40f1-69d0-f6c9-0e51", "type": "rule"},
+          {"id": "6621-202d-3b54-a2dd", "hidden": false, "targetId": "c4ec-e3e4-82c1-54a4", "type": "rule"}
+        ],
+        "selectionEntries": [
+          {
+            "name": "Planetfall(3)",
+            "id": "3316-d726-26e3-c8ec",
+            "collective": true,
+            "hidden": false,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Upgrades",
+            "id": "e5d3-139d-86b7-0f0f",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Experienced Engineers",
+                "id": "21dd-6885-7cd8-149c",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "af85-0231-0328-4f3f", "hidden": false, "targetId": "d7e6d673-f418-01f5-c382-b171ed6b09f9", "type": "rule"}]
+              }
+            ]
+          },
+          {
+            "name": "Hardpoints",
+            "id": "6010-4475-b395-0b34",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Reinforced (Starboard/Port)",
+                "id": "2f3f-6a7d-c15b-32e9",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "infoLinks": [{"id": "2cd2-b70d-11e8-37d0", "hidden": false, "targetId": "c4ab97a7-8ac0-aadb-af9b-df38dd010b66", "type": "rule"}]
+              },
+              {
+                "name": "+2 Mv",
+                "id": "3f27-05d3-85a5-22d0",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kontos",
+        "id": "929b5f59-dde7-4341-9a89-0571bcb33d82",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 20}],
+        "infoLinks": [
+          {"id": "f171aa84-8575-0112-8bac-a5dbf9840936", "hidden": false, "targetId": "686e26e1-10de-0786-d58d-1e6cd845be09", "type": "rule"},
+          {"id": "a66a-4afd-6af1-8e52", "hidden": false, "targetId": "5c9b-128e-a17d-d6ee", "type": "profile"}
+        ]
+      }
+    ],
+    "sharedSelectionEntryGroups": [
+      {
+        "name": "Amentum Accompaniments",
+        "id": "2ead-bbe4-0171-afb1",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Falcata Cruiser",
+            "id": "9dd4-3018-edfa-4dc3",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [{"id": "183b-66f8-3731-bc4b", "hidden": false, "targetId": "2480-7578-f4eb-54b1", "type": "selectionEntry"}]
+          },
+          {
+            "name": "Katar Assault Cruiser",
+            "id": "bba3-291f-35fa-b106",
+            "collective": false,
+            "hidden": false,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [{"id": "1bee-eb95-d785-40b0", "hidden": false, "targetId": "f274-b5c4-a274-219a", "type": "selectionEntry"}]
+          },
+          {
+            "name": "Skyhammer Cruiser (Uses Falcata Profile  Below)",
+            "id": "35cd-e855-67d3-c61e",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [{"id": "ab7b-15de-02f1-9218", "hidden": false, "targetId": "2480-7578-f4eb-54b1", "type": "selectionEntry"}]
+          },
+          {
+            "name": "Harvester Gunship",
+            "id": "386e-01e1-5872-4a11",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [{"id": "a54c-7c5e-023b-8367", "hidden": false, "targetId": "b4d5-47fe-6084-2c56", "type": "selectionEntry"}]
+          }
+        ]
+      },
+      {
+        "name": "SRS Tokens",
+        "id": "d71c-3a7e-27fa-347f",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Support Shuttle Token",
+            "id": "c5a2-9b89-a14f-3cb2",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "profiles": [
+              {
+                "name": "(SRS) Support Shuttle",
+                "id": "aa71-5795-57fe-7ac7",
+                "hidden": false,
+                "typeId": "2cf1-c9ab-3840-931a",
+                "typeName": "SRS Token",
+                "characteristics": [
+                  {"name": "Mv", "$text": "8\"", "typeId": "51cd-7087-6fe8-3c61"},
+                  {"name": "AD", "$text": "0", "typeId": "15fb-fff8-6d89-0c16"},
+                  {"name": "PD", "$text": "0", "typeId": "5129-5f00-6506-3ce6"},
+                  {"name": "AP", "$text": "0", "typeId": "4474-acef-601d-d3ec"},
+                  {"name": "Token Size", "$text": "Large", "typeId": "ee90-104e-254a-ac33"}
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "3b9c-64c7-e6fd-c759",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Support Shuttle",
+                    "id": "b4fe-7e1f-3ceb-f3de",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Assault Shuttle Token",
+            "id": "f859-a9f6-cf62-4b98",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "profiles": [
+              {
+                "name": "(SRS) Assault Shuttle",
+                "id": "cec6-5b05-e26b-0091",
+                "hidden": false,
+                "typeId": "2cf1-c9ab-3840-931a",
+                "typeName": "SRS Token",
+                "characteristics": [
+                  {"name": "Mv", "$text": "8\"", "typeId": "51cd-7087-6fe8-3c61"},
+                  {"name": "AD", "$text": "0", "typeId": "15fb-fff8-6d89-0c16"},
+                  {"name": "PD", "$text": "1", "typeId": "5129-5f00-6506-3ce6"},
+                  {"name": "AP", "$text": "2", "typeId": "4474-acef-601d-d3ec"},
+                  {"name": "Token Size", "$text": "Large", "typeId": "ee90-104e-254a-ac33"}
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "9e3e-2544-2df6-49d2",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Assault Shuttle",
+                    "id": "6758-92b7-b27a-634f",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Bomber Token",
+            "id": "7bf1-775e-c1bf-54ca",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "profiles": [
+              {
+                "name": "(SRS) Bomber",
+                "id": "3bfc-65b4-58be-9b3a",
+                "hidden": false,
+                "typeId": "2cf1-c9ab-3840-931a",
+                "typeName": "SRS Token",
+                "characteristics": [
+                  {"name": "Mv", "$text": "12\"", "typeId": "51cd-7087-6fe8-3c61"},
+                  {"name": "AD", "$text": "3", "typeId": "15fb-fff8-6d89-0c16"},
+                  {"name": "PD", "$text": "1", "typeId": "5129-5f00-6506-3ce6"},
+                  {"name": "AP", "$text": "0", "typeId": "4474-acef-601d-d3ec"},
+                  {"name": "Token Size", "$text": "Large", "typeId": "ee90-104e-254a-ac33"}
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "a863-28c8-d574-0e40",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Bomber",
+                    "id": "25d2-1020-9fe4-441b",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fighter Token",
+            "id": "3ff3-abe7-977e-8c05",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "profiles": [
+              {
+                "name": "(SRS) Fighter",
+                "id": "179f-ffc0-87d3-9f97",
+                "hidden": false,
+                "typeId": "2cf1-c9ab-3840-931a",
+                "typeName": "SRS Token",
+                "characteristics": [
+                  {"name": "Mv", "$text": "18\"", "typeId": "51cd-7087-6fe8-3c61"},
+                  {"name": "AD", "$text": "2", "typeId": "15fb-fff8-6d89-0c16"},
+                  {"name": "PD", "$text": "1", "typeId": "5129-5f00-6506-3ce6"},
+                  {"name": "AP", "$text": "0", "typeId": "4474-acef-601d-d3ec"},
+                  {"name": "Token Size", "$text": "Small", "typeId": "ee90-104e-254a-ac33"}
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "4c4c-b172-1a49-7ec5",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Fighter",
+                    "id": "7940-8729-e4e3-553c",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Interceptor Token",
+            "id": "dfa1-c744-5f48-8a2f",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "profiles": [
+              {
+                "name": "(SRS) Interceptor",
+                "id": "3966-37d4-db74-017e",
+                "hidden": false,
+                "typeId": "2cf1-c9ab-3840-931a",
+                "typeName": "SRS Token",
+                "characteristics": [
+                  {"name": "Mv", "$text": "12\"", "typeId": "51cd-7087-6fe8-3c61"},
+                  {"name": "AD", "$text": "0", "typeId": "15fb-fff8-6d89-0c16"},
+                  {"name": "PD", "$text": "2", "typeId": "5129-5f00-6506-3ce6"},
+                  {"name": "AP", "$text": "0", "typeId": "4474-acef-601d-d3ec"},
+                  {"name": "Token Size", "$text": "Small", "typeId": "ee90-104e-254a-ac33"}
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "7f6c-5102-301b-e179",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Interceptor",
+                    "id": "22ec-0ea6-6769-e43e",
+                    "collective": false,
+                    "hidden": false,
+                    "page": 0,
+                    "type": "model",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 5}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

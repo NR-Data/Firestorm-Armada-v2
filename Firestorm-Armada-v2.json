@@ -1,0 +1,2712 @@
+{
+  "gameSystem": {
+    "name": "Firestorm-Armada-v2",
+    "id": "417a1fa3-3f8e-7789-d5ec-a4ebd35323cd",
+    "authorContact": "steve_990@hotmail.com",
+    "authorName": "Steve_990",
+    "authorUrl": "http://community.spartangames.co.uk",
+    "battleScribeVersion": 2.03,
+    "revision": 28,
+    "type": "gameSystem",
+    "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
+    "categoryEntries": [
+      {"name": "Captured Tier 1", "id": "fb33a7a8-0e70-041a-60cd-01ead5c84212", "hidden": false},
+      {"name": "Tier 1", "id": "9491469f-4e1a-978c-e141-b7f12a6a7b91", "hidden": false},
+      {"name": "Tier 2", "id": "25598bba-53b3-5db3-d582-e6b933204c73", "hidden": false},
+      {"name": "Captured Tier 2", "id": "eadd1506-0d85-9e5e-2d16-05917da48d38", "hidden": false},
+      {"name": "Tier 3", "id": "ab987c46-f204-0bf9-a6a9-8498c13509ee", "hidden": false},
+      {"name": "Captured Tier 3", "id": "5fadc939-c832-600c-2647-b64f3229e42f", "hidden": false},
+      {"name": "Mercenary Escorts", "id": "ee40567b-ddc7-be95-1cbc-def74dd8ce71", "hidden": false},
+      {"name": "Tier 3", "id": "a6a0-be97-d10c-4e67", "hidden": false},
+      {"name": "Faction", "id": "d9648717-c771-44ba-8fdb-0dc2a0e8954b", "hidden": false},
+      {"name": "Fleet  Escorts", "id": "4861-b9d2-134a-178b", "hidden": false},
+      {"name": "Invasion Tier 1", "id": "aa21-68db-bcd8-7604", "hidden": false},
+      {"name": "Invasion Tier 2", "id": "a9a1-337e-5f64-1235", "hidden": false},
+      {"name": "Invasion Tier 3", "id": "4618-f494-4916-2ebe", "hidden": false}
+    ],
+    "costTypes": [{"name": "pts", "id": "points", "defaultCostLimit": 0}],
+    "forceEntries": [
+      {
+        "name": "Marauder Fleet",
+        "id": "ef5df915-68b7-ad29-3e4f-a7d785f5d7ad",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "Captured Tier 1",
+            "id": "ef5df915-68b7-ad29-3e4f-a7d785f5d7ad-fb33a7a8-0e70-041a-60cd-01ead5c84212",
+            "hidden": false,
+            "targetId": "fb33a7a8-0e70-041a-60cd-01ead5c84212",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "maxSelections",
+                "type": "increment",
+                "value": 1,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "increment",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tier 1",
+            "id": "ef5df915-68b7-ad29-3e4f-a7d785f5d7ad-9491469f-4e1a-978c-e141-b7f12a6a7b91",
+            "hidden": false,
+            "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91",
+            "constraints": [
+              {
+                "id": "a868-3d25-1927-957e",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "fc4b-ec66-cbee-93b5",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "a868-3d25-1927-957e",
+                "type": "increment",
+                "value": 1,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "a868-3d25-1927-957e",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "fb33a7a8-0e70-041a-60cd-01ead5c84212",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "a868-3d25-1927-957e",
+                "type": "increment",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tier 2",
+            "id": "ef5df915-68b7-ad29-3e4f-a7d785f5d7ad-25598bba-53b3-5db3-d582-e6b933204c73",
+            "hidden": false,
+            "targetId": "25598bba-53b3-5db3-d582-e6b933204c73",
+            "constraints": [
+              {
+                "id": "731c-43f4-6404-3db7",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "43ff-5eaa-a834-41ad",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "731c-43f4-6404-3db7",
+                "type": "increment",
+                "value": 1,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "731c-43f4-6404-3db7",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "eadd1506-0d85-9e5e-2d16-05917da48d38",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "731c-43f4-6404-3db7",
+                "type": "increment",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Captured Tier 2",
+            "id": "ef5df915-68b7-ad29-3e4f-a7d785f5d7ad-eadd1506-0d85-9e5e-2d16-05917da48d38",
+            "hidden": false,
+            "targetId": "eadd1506-0d85-9e5e-2d16-05917da48d38",
+            "constraints": [
+              {
+                "id": "2efc-cceb-08d6-81cc",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "2efc-cceb-08d6-81cc",
+                "type": "increment",
+                "value": 1,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "2efc-cceb-08d6-81cc",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "25598bba-53b3-5db3-d582-e6b933204c73",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "2efc-cceb-08d6-81cc",
+                "type": "increment",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tier 3",
+            "id": "ef5df915-68b7-ad29-3e4f-a7d785f5d7ad-ab987c46-f204-0bf9-a6a9-8498c13509ee",
+            "hidden": false,
+            "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee",
+            "constraints": [
+              {
+                "id": "ddfb-cb46-9f0e-8db9",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 3
+              },
+              {
+                "id": "ac53-b87d-dc38-f47c",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "ddfb-cb46-9f0e-8db9",
+                "type": "increment",
+                "value": 1,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "ddfb-cb46-9f0e-8db9",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "5fadc939-c832-600c-2647-b64f3229e42f",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "ddfb-cb46-9f0e-8db9",
+                "type": "increment",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "ac53-b87d-dc38-f47c",
+                "type": "set",
+                "value": 3,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "ac53-b87d-dc38-f47c",
+                "type": "set",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Captured Tier 3",
+            "id": "ef5df915-68b7-ad29-3e4f-a7d785f5d7ad-5fadc939-c832-600c-2647-b64f3229e42f",
+            "hidden": false,
+            "targetId": "5fadc939-c832-600c-2647-b64f3229e42f",
+            "constraints": [
+              {
+                "id": "8e02-1028-2407-36da",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 3
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "8e02-1028-2407-36da",
+                "type": "increment",
+                "value": 1,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "8e02-1028-2407-36da",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "8e02-1028-2407-36da",
+                "type": "increment",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "forceEntries": [
+          {
+            "name": "Marauder Fleet Accompaniment",
+            "id": "617f63d5-8441-b61f-12ac-458193f506b4",
+            "hidden": false,
+            "categoryLinks": [
+              {
+                "name": "Mercenary Escorts",
+                "id": "617f63d5-8441-b61f-12ac-458193f506b4-ee40567b-ddc7-be95-1cbc-def74dd8ce71",
+                "hidden": false,
+                "targetId": "ee40567b-ddc7-be95-1cbc-def74dd8ce71"
+              },
+              {
+                "name": "Tier 1",
+                "id": "617f63d5-8441-b61f-12ac-458193f506b4-9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "hidden": false,
+                "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "maxSelections",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 2",
+                "id": "617f63d5-8441-b61f-12ac-458193f506b4-25598bba-53b3-5db3-d582-e6b933204c73",
+                "hidden": false,
+                "targetId": "25598bba-53b3-5db3-d582-e6b933204c73",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "maxSelections",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 3",
+                "id": "617f63d5-8441-b61f-12ac-458193f506b4-ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                "hidden": false,
+                "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Standard Fleet",
+        "id": "b2bfd1b1-a8a0-b3a6-0cfc-c304cb84dca5",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "Tier 1",
+            "id": "b2bfd1b1-a8a0-b3a6-0cfc-c304cb84dca5-9491469f-4e1a-978c-e141-b7f12a6a7b91",
+            "hidden": false,
+            "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "minSelections",
+                "type": "set",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 2001
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 3,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1201
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 4,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 2001
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tier 2",
+            "id": "b2bfd1b1-a8a0-b3a6-0cfc-c304cb84dca5-25598bba-53b3-5db3-d582-e6b933204c73",
+            "hidden": false,
+            "targetId": "25598bba-53b3-5db3-d582-e6b933204c73",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 3,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1201
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "minSelections",
+                "type": "set",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 2001
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 4,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 2001
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tier 3",
+            "id": "b2bfd1b1-a8a0-b3a6-0cfc-c304cb84dca5-ab987c46-f204-0bf9-a6a9-8498c13509ee",
+            "hidden": false,
+            "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 3
+              },
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "minSelections",
+                "type": "set",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1201
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 6,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 2001
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 4,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1201
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "minSelections",
+                "type": "set",
+                "value": 3,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 2001
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "id": "2d84-8c4e-a553-b3c6",
+            "field": "limit::points",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": true,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 50
+          }
+        ],
+        "forceEntries": [
+          {
+            "name": "Mercenary Accompaniment",
+            "id": "178271c5-0c3c-b355-7bf0-3a547824f495",
+            "hidden": false,
+            "categoryLinks": [
+              {
+                "name": "Mercenary Escorts",
+                "id": "178271c5-0c3c-b355-7bf0-3a547824f495-ee40567b-ddc7-be95-1cbc-def74dd8ce71",
+                "hidden": false,
+                "targetId": "ee40567b-ddc7-be95-1cbc-def74dd8ce71"
+              },
+              {
+                "name": "Tier 1",
+                "id": "178271c5-0c3c-b355-7bf0-3a547824f495-9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "hidden": false,
+                "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "maxSelections",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 2",
+                "id": "178271c5-0c3c-b355-7bf0-3a547824f495-25598bba-53b3-5db3-d582-e6b933204c73",
+                "hidden": false,
+                "targetId": "25598bba-53b3-5db3-d582-e6b933204c73",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "maxSelections",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 3",
+                "id": "178271c5-0c3c-b355-7bf0-3a547824f495-a6a0-be97-d10c-4e67",
+                "hidden": false,
+                "targetId": "a6a0-be97-d10c-4e67",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 2
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "maxSelections",
+                    "type": "set",
+                    "value": 3,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Faction",
+                "id": "178271c5-0c3c-b355-7bf0-3a547824f495-d9648717-c771-44ba-8fdb-0dc2a0e8954b",
+                "hidden": false,
+                "targetId": "d9648717-c771-44ba-8fdb-0dc2a0e8954b",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "id": "maxPercentage",
+                "field": "limit::points",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "percentValue": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "max",
+                "value": 25
+              }
+            ]
+          },
+          {
+            "name": "Allied Accompaniment",
+            "id": "a15eae53-2012-b6e5-0a0c-9396f67e0adc",
+            "hidden": false,
+            "categoryLinks": [
+              {"name": "Fleet  Escorts", "id": "a15eae53-2012-b6e5-0a0c-9396f67e0adc-4861-b9d2-134a-178b", "hidden": false, "targetId": "4861-b9d2-134a-178b"},
+              {
+                "name": "Tier 1",
+                "id": "a15eae53-2012-b6e5-0a0c-9396f67e0adc-9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "hidden": false,
+                "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "maxSelections",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 2",
+                "id": "a15eae53-2012-b6e5-0a0c-9396f67e0adc-25598bba-53b3-5db3-d582-e6b933204c73",
+                "hidden": false,
+                "targetId": "25598bba-53b3-5db3-d582-e6b933204c73",
+                "constraints": [
+                  {
+                    "id": "c024-3a90-1ab6-b31c",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "c024-3a90-1ab6-b31c",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 3",
+                "id": "a15eae53-2012-b6e5-0a0c-9396f67e0adc-ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                "hidden": false,
+                "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                "constraints": [
+                  {
+                    "id": "a785-1537-5749-ef0b",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 2
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "a785-1537-5749-ef0b",
+                    "type": "set",
+                    "value": 3,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "id": "maxPercentage",
+                "field": "limit::points",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "percentValue": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "max",
+                "value": 25
+              }
+            ]
+          },
+          {
+            "name": "Natural Allies Accompaniment",
+            "id": "f0a3dc88-06cf-cdc0-1a5b-0c6fe8574762",
+            "hidden": false,
+            "categoryLinks": [
+              {"name": "Fleet  Escorts", "id": "f0a3dc88-06cf-cdc0-1a5b-0c6fe8574762-4861-b9d2-134a-178b", "hidden": false, "targetId": "4861-b9d2-134a-178b"},
+              {
+                "name": "Tier 1",
+                "id": "f0a3dc88-06cf-cdc0-1a5b-0c6fe8574762-9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "hidden": false,
+                "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "constraints": [
+                  {
+                    "id": "2be3-e81d-5ee4-e911",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "2be3-e81d-5ee4-e911",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 2",
+                "id": "f0a3dc88-06cf-cdc0-1a5b-0c6fe8574762-25598bba-53b3-5db3-d582-e6b933204c73",
+                "hidden": false,
+                "targetId": "25598bba-53b3-5db3-d582-e6b933204c73",
+                "constraints": [
+                  {
+                    "id": "bbe9-d93d-228a-08cd",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "bbe9-d93d-228a-08cd",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 3",
+                "id": "f0a3dc88-06cf-cdc0-1a5b-0c6fe8574762-ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                "hidden": false,
+                "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                "constraints": [
+                  {
+                    "id": "bb2e-8f44-8dfa-6d85",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 2
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "bb2e-8f44-8dfa-6d85",
+                    "type": "set",
+                    "value": 3,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "id": "maxPercentage",
+                "field": "limit::points",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "percentValue": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "max",
+                "value": 50
+              }
+            ]
+          },
+          {
+            "name": "Planetfall Invasion Fleet",
+            "id": "8858-a93d-4dd4-affd",
+            "hidden": false,
+            "categoryLinks": [
+              {
+                "name": "Invasion Tier 1",
+                "id": "8858-a93d-4dd4-affd-aa21-68db-bcd8-7604",
+                "hidden": false,
+                "targetId": "aa21-68db-bcd8-7604",
+                "constraints": [
+                  {
+                    "id": "e98e-713d-c385-5715",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "e98e-713d-c385-5715",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Invasion Tier 2",
+                "id": "8858-a93d-4dd4-affd-a9a1-337e-5f64-1235",
+                "hidden": false,
+                "targetId": "a9a1-337e-5f64-1235",
+                "constraints": [
+                  {
+                    "id": "8308-bedb-59b3-8e2f",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "8308-bedb-59b3-8e2f",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Invasion Tier 3",
+                "id": "8858-a93d-4dd4-affd-4618-f494-4916-2ebe",
+                "hidden": false,
+                "targetId": "4618-f494-4916-2ebe",
+                "constraints": [
+                  {
+                    "id": "ad26-211e-664b-d9b9",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 2
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "ad26-211e-664b-d9b9",
+                    "type": "set",
+                    "value": 3,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Support Fleet",
+        "id": "e96efe6e-0d1e-ec24-7037-571b63a47fdd",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "Tier 1",
+            "id": "e96efe6e-0d1e-ec24-7037-571b63a47fdd-9491469f-4e1a-978c-e141-b7f12a6a7b91",
+            "hidden": false,
+            "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "minSelections",
+                "type": "set",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 3,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 4,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tier 2",
+            "id": "e96efe6e-0d1e-ec24-7037-571b63a47fdd-25598bba-53b3-5db3-d582-e6b933204c73",
+            "hidden": false,
+            "targetId": "25598bba-53b3-5db3-d582-e6b933204c73",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 3,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "minSelections",
+                "type": "set",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 4,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tier 3",
+            "id": "e96efe6e-0d1e-ec24-7037-571b63a47fdd-ab987c46-f204-0bf9-a6a9-8498c13509ee",
+            "hidden": false,
+            "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 3
+              },
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "minSelections",
+                "type": "set",
+                "value": 2,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 6,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "maxSelections",
+                "type": "set",
+                "value": 4,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "minSelections",
+                "type": "set",
+                "value": 3,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      },
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atMost",
+                        "value": 2000
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "forceEntries": [
+          {
+            "name": "Mercenary Contingent",
+            "id": "80b56072-59d4-df5d-ba2c-8ee6245b4601",
+            "hidden": false,
+            "categoryLinks": [
+              {
+                "name": "Mercenary Escorts",
+                "id": "80b56072-59d4-df5d-ba2c-8ee6245b4601-ee40567b-ddc7-be95-1cbc-def74dd8ce71",
+                "hidden": false,
+                "targetId": "ee40567b-ddc7-be95-1cbc-def74dd8ce71"
+              },
+              {
+                "name": "Tier 1",
+                "id": "80b56072-59d4-df5d-ba2c-8ee6245b4601-9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "hidden": false,
+                "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "constraints": [
+                  {
+                    "id": "d3a6-6292-a96d-5962",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "d3a6-6292-a96d-5962",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 2",
+                "id": "80b56072-59d4-df5d-ba2c-8ee6245b4601-25598bba-53b3-5db3-d582-e6b933204c73",
+                "hidden": false,
+                "targetId": "25598bba-53b3-5db3-d582-e6b933204c73",
+                "constraints": [
+                  {
+                    "id": "ede3-b32a-73bd-6deb",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "ede3-b32a-73bd-6deb",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 3",
+                "id": "80b56072-59d4-df5d-ba2c-8ee6245b4601-ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                "hidden": false,
+                "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                "constraints": [
+                  {
+                    "id": "fcae-7fa1-2e03-2754",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 2
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "fcae-7fa1-2e03-2754",
+                    "type": "set",
+                    "value": 3,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Faction",
+                "id": "80b56072-59d4-df5d-ba2c-8ee6245b4601-d9648717-c771-44ba-8fdb-0dc2a0e8954b",
+                "hidden": false,
+                "targetId": "d9648717-c771-44ba-8fdb-0dc2a0e8954b",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Support Fleet Accompaniment",
+            "id": "775a0e19-682c-c86a-87b2-f883cf073550",
+            "hidden": false,
+            "categoryLinks": [
+              {"name": "Fleet  Escorts", "id": "775a0e19-682c-c86a-87b2-f883cf073550-4861-b9d2-134a-178b", "hidden": false, "targetId": "4861-b9d2-134a-178b"},
+              {
+                "name": "Tier 1",
+                "id": "775a0e19-682c-c86a-87b2-f883cf073550-9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "hidden": false,
+                "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91",
+                "constraints": [
+                  {
+                    "id": "3ae2-4ba6-8e77-c0e7",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "3ae2-4ba6-8e77-c0e7",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 2",
+                "id": "775a0e19-682c-c86a-87b2-f883cf073550-25598bba-53b3-5db3-d582-e6b933204c73",
+                "hidden": false,
+                "targetId": "25598bba-53b3-5db3-d582-e6b933204c73",
+                "constraints": [
+                  {
+                    "id": "0d3e-8c23-a57c-3270",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "0d3e-8c23-a57c-3270",
+                    "type": "set",
+                    "value": 2,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 800
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Tier 3",
+                "id": "775a0e19-682c-c86a-87b2-f883cf073550-ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                "hidden": false,
+                "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee",
+                "constraints": [
+                  {
+                    "id": "31f2-60f8-8c62-0438",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 2
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "31f2-60f8-8c62-0438",
+                    "type": "set",
+                    "value": 3,
+                    "conditions": [
+                      {
+                        "childId": "any",
+                        "field": "limit::points",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1200
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "constraints": [
+              {
+                "id": "395f-b824-ea7f-6586",
+                "field": "limit::points",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "percentValue": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "max",
+                "value": 50
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "profileTypes": [
+      {
+        "name": "Ship",
+        "id": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristicTypes": [
+          {"name": "Designation", "id": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "id": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "id": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "id": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "id": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "id": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "id": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "id": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "id": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "id": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "id": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "id": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "SRS Token",
+        "id": "2cf1-c9ab-3840-931a",
+        "characteristicTypes": [
+          {"name": "Mv", "id": "51cd-7087-6fe8-3c61"},
+          {"name": "AD", "id": "15fb-fff8-6d89-0c16"},
+          {"name": "PD", "id": "5129-5f00-6506-3ce6"},
+          {"name": "AP", "id": "4474-acef-601d-d3ec"},
+          {"name": "Token Size", "id": "ee90-104e-254a-ac33"}
+        ]
+      },
+      {
+        "name": "Weapon",
+        "id": "b43e-2222-4230-3aac",
+        "characteristicTypes": [
+          {"name": "Arc", "id": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "id": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "id": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "id": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "id": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "id": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "id": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "id": "f67f-5825-72ff-a4f4"}
+        ]
+      }
+    ]
+  }
+}

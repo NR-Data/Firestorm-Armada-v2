@@ -1,0 +1,4031 @@
+{
+  "catalogue": {
+    "name": "Pathogen Fleet",
+    "id": "d8e0b405-898c-9256-2b55-50a4e22b45b1",
+    "authorContact": "steve_990@hotmail.com",
+    "authorName": "Steve_990",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "417a1fa3-3f8e-7789-d5ec-a4ebd35323cd",
+    "gameSystemRevision": 3,
+    "revision": 7,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
+    "publications": [{"name": "Marauders pdf", "id": "d8e0b405--pub1"}],
+    "rules": [
+      {
+        "name": "Pathogen Fleet Statistics",
+        "id": "126762a2-56b6-7506-9e9e-48fb86729437",
+        "description": "Fleet Tactics Bonus: 1\nCommand Distance: 5\"",
+        "hidden": false
+      }
+    ],
+    "selectionEntries": [
+      {
+        "name": "Battleship",
+        "id": "19b5d3ac-8cd3-07c5-7c3c-cdab60945b6f",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "19b5d3ac-8cd3-07c5-7c3c-cdab60945b6f-9491469f-4e1a-978c-e141-b7f12a6a7b91", "primary": true, "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 2
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 1200
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 800
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 3,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 2000
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 1200
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "314c9ce3-7af4-5777-2ff9-acfb06833e1e",
+            "collective": false,
+            "defaultSelectionEntryId": "5e05db3b-00ad-6c76-bc05-ee1b65de3670",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "entryLinks": [{"id": "aea2-2f96-68cb-f520", "hidden": false, "targetId": "adf3-e7d7-ef63-437a", "type": "selectionEntryGroup"}],
+            "selectionEntries": [
+              {
+                "name": "Botulinus Battleship",
+                "id": "5e05db3b-00ad-6c76-bc05-ee1b65de3670",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "model",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [{"id": "88e3ca63-703f-3fe1-d78c-0bd438a3edf0", "hidden": false, "targetId": "0569-6264-acbc-a680", "type": "selectionEntry"}]
+              },
+              {
+                "name": "Maximum Squadron Size 4",
+                "id": "42bb-17fa-4332-1ed6",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Captured Large",
+        "id": "06601fa9-68de-ecb5-6006-29548a12b062",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "06601fa9-68de-ecb5-6006-29548a12b062-fb33a7a8-0e70-041a-60cd-01ead5c84212", "primary": true, "targetId": "fb33a7a8-0e70-041a-60cd-01ead5c84212"}],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "87d5ab2a-5c1d-02dd-6c33-c39e106eab76",
+            "collective": false,
+            "defaultSelectionEntryId": "80703171-ba27-e288-ddcd-bc041c2c7840",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "entryLinks": [{"id": "c9eb-bce2-2024-0c0a", "hidden": false, "targetId": "d365-7d61-0a72-13c8", "type": "selectionEntryGroup"}],
+            "selectionEntries": [
+              {
+                "name": "Contagion Captured Large",
+                "id": "80703171-ba27-e288-ddcd-bc041c2c7840",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "model",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [{"id": "f79cd492-d420-2f35-49a0-9a018af7b4ff", "hidden": false, "targetId": "9ddd-e415-9d89-248e", "type": "selectionEntry"}]
+              },
+              {
+                "name": "Maximum Squadron Size 5",
+                "id": "e911-726f-8ec5-b29c",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Captured Medium Squadron",
+        "id": "8094d89d-1ac5-f4ef-0888-44a70e18f9e0",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "8094d89d-1ac5-f4ef-0888-44a70e18f9e0-eadd1506-0d85-9e5e-2d16-05917da48d38", "primary": true, "targetId": "eadd1506-0d85-9e5e-2d16-05917da48d38"}],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "3ca579c0-a881-92b5-90c8-429aa77a93cf",
+            "collective": false,
+            "defaultSelectionEntryId": "08719b8d-0eed-b6c4-53dd-9653f99cfdee",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "entryLinks": [{"id": "e1a0-2461-5777-3d9e", "hidden": false, "targetId": "ceba-8542-be45-28f3", "type": "selectionEntryGroup"}],
+            "selectionEntries": [
+              {
+                "name": "Mitosis Captured Medium",
+                "id": "08719b8d-0eed-b6c4-53dd-9653f99cfdee",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "unit",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 2
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 6
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [{"id": "31eb-b5d4-3001-f516", "hidden": false, "targetId": "4040-a9ad-a53b-a3c7", "type": "selectionEntry"}]
+              },
+              {
+                "name": "Maximum Squadron Size 8",
+                "id": "cf95-b436-f004-51a9",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+              }
+            ]
+          },
+          {
+            "name": "DO NOT ADJUST - CALCULATION ONLY",
+            "id": "5394-771e-8b94-d6ba",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Maximum Squadron Size 8",
+                "id": "d67e-74aa-29df-8909",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 9
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "modifiers": [
+                  {
+                    "field": "maxSelections",
+                    "type": "decrement",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "ca18-c5f1-d873-571e",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "8094d89d-1ac5-f4ef-0888-44a70e18f9e0",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "maxSelections",
+                    "type": "decrement",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "4040-a9ad-a53b-a3c7",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "8094d89d-1ac5-f4ef-0888-44a70e18f9e0",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Captured Ship Reference",
+        "id": "560d-7540-b848-9e02",
+        "collective": false,
+        "hidden": false,
+        "type": "upgrade",
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "infoLinks": [
+          {"id": "5169-2e27-7285-1ec6", "hidden": false, "targetId": "eb94ab4b-4071-d10a-f28b-92a2aca4d3f5", "type": "profile"},
+          {"id": "00c4-bda1-3e24-a069", "hidden": false, "targetId": "21dba64a-29d9-7b9e-a198-318f9bc758f1", "type": "profile"},
+          {"id": "f533-a2c2-111b-050a", "hidden": false, "targetId": "bd4bf38e-5e85-4352-3020-fe0b96d595db", "type": "profile"},
+          {"id": "cb25-2a37-c87f-c0f1", "hidden": false, "targetId": "dbca63a6-6474-7275-e4cc-aaa083033d03", "type": "profile"},
+          {"id": "c1dd-38eb-da42-a9d7", "hidden": false, "targetId": "d87aa97f-94db-be14-36c5-1416b3af56b6", "type": "profile"},
+          {"id": "764a-18a3-c485-3f94", "hidden": false, "targetId": "74ec7e32-0849-cd12-8903-9b8c60142ead", "type": "profile"},
+          {"id": "4ae4-da71-c77f-e7b6", "hidden": false, "targetId": "e0e13423-fe13-1161-7a5d-fc6ff5f57a9c", "type": "profile"},
+          {"id": "4914-dd8e-040a-ad56", "hidden": false, "targetId": "62daaae9-33db-356e-c637-37db54c32ca1", "type": "profile"},
+          {"id": "9f80-cc5c-8dfc-07f5", "hidden": false, "targetId": "12a388eb-b927-bc11-62df-0f9382596357", "type": "profile"},
+          {"id": "52c4-3f3e-f3f3-bfb3", "hidden": false, "targetId": "85819e60-f72d-9187-bc69-a0f8368149e6", "type": "profile"}
+        ]
+      },
+      {
+        "name": "Captured Small Squadron",
+        "id": "3d722aef-8eaf-3a89-f7c2-29c6b79b1cb5",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "3d722aef-8eaf-3a89-f7c2-29c6b79b1cb5-5fadc939-c832-600c-2647-b64f3229e42f", "primary": true, "targetId": "5fadc939-c832-600c-2647-b64f3229e42f"}],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "ece52b6f-c463-89c6-ee54-110b6be02a98",
+            "collective": false,
+            "defaultSelectionEntryId": "c16a3ac3-e0a8-8884-8efc-7fe1c1bbfc0a",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Stem Captured Small",
+                "id": "c16a3ac3-e0a8-8884-8efc-7fe1c1bbfc0a",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "unit",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 2
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 8
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [{"id": "b57f-1745-08ae-fa14", "hidden": false, "targetId": "ca18-c5f1-d873-571e", "type": "selectionEntry"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Carrier",
+        "id": "99747a5f-76b7-8c38-8268-a5a6a617a098",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "99747a5f-76b7-8c38-8268-a5a6a617a098-9491469f-4e1a-978c-e141-b7f12a6a7b91", "primary": true, "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 2
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 3,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 1200
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 800
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 2000
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 1200
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "db9f8275-1bfa-dd34-d3df-da5b06fdd817",
+            "collective": false,
+            "defaultSelectionEntryId": "649ef932-5259-99c1-98ae-cadbf03c9d46",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "entryLinks": [{"id": "135a-02b8-7dde-a9df", "hidden": false, "targetId": "0d16-c8c3-081e-3237", "type": "selectionEntryGroup"}],
+            "selectionEntries": [
+              {
+                "name": "Naeglaria Carrier",
+                "id": "649ef932-5259-99c1-98ae-cadbf03c9d46",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "model",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [{"id": "c09bc673-fb21-3963-8905-a77890fd354e", "hidden": false, "targetId": "e933-2a92-35b7-fcd1", "type": "selectionEntry"}]
+              },
+              {
+                "name": "Maximum Squadron Size 5",
+                "id": "c8f8-5229-ccd2-6fa1",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cruiser Squadron",
+        "id": "05bbbb17-7eb9-f379-0d14-0ce3051631e9",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "05bbbb17-7eb9-f379-0d14-0ce3051631e9-25598bba-53b3-5db3-d582-e6b933204c73", "primary": true, "targetId": "25598bba-53b3-5db3-d582-e6b933204c73"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 2
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 3,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 1200
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 800
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 4,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 2000
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 1200
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Maximum Squadron Size 6",
+            "id": "14c7-f768-6642-9f81",
+            "collective": false,
+            "hidden": false,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "5b6f-b208-0e8e-1554",
+            "collective": false,
+            "defaultSelectionEntryId": "25c6-a8e7-1a94-d4ce",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "entryLinks": [{"id": "e2ed-9f12-1591-4d9a", "hidden": false, "targetId": "4de8-20c7-b5f7-7b02", "type": "selectionEntryGroup"}],
+            "selectionEntries": [
+              {
+                "name": "Chaga Cruiser",
+                "id": "25c6-a8e7-1a94-d4ce",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "unit",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 2
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 4
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [{"id": "cf04-77d4-6506-fa54", "hidden": false, "targetId": "e452-5d19-383a-385a", "type": "selectionEntry"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dreadnought",
+        "id": "7699ae12-0191-48b2-6c57-8802e90d60e7",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "7699ae12-0191-48b2-6c57-8802e90d60e7-9491469f-4e1a-978c-e141-b7f12a6a7b91", "primary": true, "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91"}],
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 0
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 1,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 800
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 1200
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 2,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 1200
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 2000
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "any",
+                "field": "limit::points",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "roster",
+                "shared": true,
+                "type": "atMost",
+                "value": 800
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Maximum Squadron Size 4",
+            "id": "67a0-7189-4984-36c8",
+            "collective": false,
+            "hidden": false,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "f737bbef-6681-e299-bc1a-3585568c8980",
+            "collective": false,
+            "defaultSelectionEntryId": "079d83fc-f2ad-9fca-4fcc-a192bff2402a",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "entryLinks": [{"id": "ac1c-6319-465a-3396", "hidden": false, "targetId": "4a3b-acaf-f827-1ce3", "type": "selectionEntryGroup"}],
+            "selectionEntries": [
+              {
+                "name": "Hanta Dreadnought",
+                "id": "079d83fc-f2ad-9fca-4fcc-a192bff2402a",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "model",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [{"id": "ba3b3576-5ba7-aef5-9fe1-4563daa9e562", "hidden": false, "targetId": "d22d-1540-e741-fecd", "type": "selectionEntry"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Frigate Squadron",
+        "id": "2b3c7012-1058-f94b-ded1-6bc639ec11c1",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "2b3c7012-1058-f94b-ded1-6bc639ec11c1-ab987c46-f204-0bf9-a6a9-8498c13509ee", "primary": true, "targetId": "ab987c46-f204-0bf9-a6a9-8498c13509ee"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 2
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "modifiers": [
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 3,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 1200
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 800
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "maxInRoster",
+            "type": "set",
+            "value": 5,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atMost",
+                    "value": 2000
+                  },
+                  {
+                    "childId": "any",
+                    "field": "limit::points",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "greaterThan",
+                    "value": 1200
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Maximum Squadron Size 8",
+            "id": "aec3-f2d6-b956-ac94",
+            "collective": false,
+            "hidden": false,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "e38d6f85-90a1-b3c3-2707-4083ba0cc5b6",
+            "collective": false,
+            "defaultSelectionEntryId": "95577c7b-fd1c-276f-fd35-485186d0f319",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              }
+            ],
+            "entryLinks": [{"id": "142b-1f32-035b-0afd", "hidden": false, "targetId": "c96e-a5e9-0b65-c6f3", "type": "selectionEntryGroup"}],
+            "selectionEntries": [
+              {
+                "name": "Aureus Frigate",
+                "id": "95577c7b-fd1c-276f-fd35-485186d0f319",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "unit",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 2
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 6
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [{"id": "f78d-8bed-13e5-07d5", "hidden": false, "targetId": "7cf5-098f-9d34-4241", "type": "selectionEntry"}]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sharedProfiles": [
+      {
+        "name": "(SRS) Pathogen",
+        "id": "c56e-292f-0d42-170b",
+        "hidden": false,
+        "typeId": "2cf1-c9ab-3840-931a",
+        "typeName": "SRS Token",
+        "characteristics": [
+          {"name": "Mv", "$text": "12\"", "typeId": "51cd-7087-6fe8-3c61"},
+          {"name": "AD", "$text": "2", "typeId": "15fb-fff8-6d89-0c16"},
+          {"name": "PD", "$text": "2", "typeId": "5129-5f00-6506-3ce6"},
+          {"name": "AP", "$text": "2", "typeId": "4474-acef-601d-d3ec"},
+          {"name": "Token Size", "$text": "Any", "typeId": "ee90-104e-254a-ac33"}
+        ]
+      },
+      {
+        "name": "Aureus ",
+        "id": "fe1a60f9-ecba-2de3-0bd3-4f671021b0e8",
+        "hidden": false,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Frigate", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "3", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "5", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "11", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "2", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "1", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "2", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "1", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "0", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Aureus_Weapon_I",
+        "id": "a9fa8097-71fe-97ca-d339-ad011ec3f736",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "3", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "4", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "-", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Infestation", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Botulinus",
+        "id": "38075ed8-773d-b4ce-fb22-f791ca90584b",
+        "hidden": false,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Battleship", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "6", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "10", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "6", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "10", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "5", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "10", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "4", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "6", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "3", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "2", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Botulinus_Weapon_I",
+        "id": "0fb71fae-cdb0-5c2d-e63d-988bef57f5af",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "12", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "14", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "8", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "4", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Infestation", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Botulinus_Weapon_II",
+        "id": "bfe9098d-62c7-1c2f-2809-3e2f372a227c",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "6", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "8", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "5", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Infestation", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Botulinus_Weapon_III",
+        "id": "c9f80b91-6ad5-e9e8-80a7-f1d611ace845",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Any", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "7", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "7", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "8", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Chaga",
+        "id": "e65f5f56-01a3-234b-3620-22b4f41b571d",
+        "hidden": false,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Cruiser", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "4", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "6", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "8", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "5", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "3", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "5", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "2", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "3", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "1", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Chaga_Weapon_I",
+        "id": "a7dd163d-5250-ffeb-786b-b697ed793662",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "4", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "5", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "-", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Infestation", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Chaga_Weapon_II",
+        "id": "b93abd57-35f8-9835-2027-8bd09d163484",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "5", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "6", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "-", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Infestation", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Chaga_Weapon_III",
+        "id": "16aa0df5-c752-b1b2-26bd-88a7f68ea267",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Any", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "4", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "5", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "-", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Contagion",
+        "id": "eb94ab4b-4071-d10a-f28b-92a2aca4d3f5",
+        "hidden": false,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Captured_Large", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "5", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "8", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "6", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "8", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "6", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "5", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "5", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "3", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "3", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "2", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Contagion_Weapon_I",
+        "id": "21dba64a-29d9-7b9e-a198-318f9bc758f1",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "4", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "5", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "2", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Primary", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Contagion_Weapon_II",
+        "id": "bd4bf38e-5e85-4352-3020-fe0b96d595db",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "4", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "6", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "2", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Primary", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Contagion_Weapon_III",
+        "id": "dbca63a6-6474-7275-e4cc-aaa083033d03",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Any", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "5", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "5", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "6", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Hanta",
+        "id": "7c089e4b-9d54-89ec-3a0e-0aa6c176f0e2",
+        "hidden": false,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Dreadnought", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "7", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "11", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "6", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "12", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "6", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "12", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "5", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "7", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "3", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "2", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Hanta_Weapon_I",
+        "id": "092838ad-17a4-0fe5-f2e2-8bdfb20e44d4",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "16", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "17", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "11", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "6", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Infestation", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Hanta_Weapon_II",
+        "id": "2ecec835-5f63-086e-5594-9f847abe623b",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "8", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "11", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "7", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Infestation", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Hanta_Weapon_III",
+        "id": "6f477e71-4c2a-ef32-d8b2-8e0b140a6f47",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Any", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "7", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "7", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "8", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Mitosis",
+        "id": "d87aa97f-94db-be14-36c5-1416b3af56b6",
+        "hidden": false,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Captured_Medium", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "4", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "6", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "8", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "4", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "4", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "2", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "3", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "2", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "1", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Mitosis_Weapon_I",
+        "id": "74ec7e32-0849-cd12-8903-9b8c60142ead",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "2", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "3", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "-", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Primary", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Mitosis_Weapon_II",
+        "id": "e0e13423-fe13-1161-7a5d-fc6ff5f57a9c",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "3", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "4", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "-", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Primary", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Mitosis_Weapon_III",
+        "id": "62daaae9-33db-356e-c637-37db54c32ca1",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Any", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "3", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "4", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "-", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Naeglaria",
+        "id": "816fdbe4-0e40-5227-f52c-0fc07276ccba",
+        "hidden": false,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Carrier", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "5", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "8", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "6", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "9", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "5", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "6", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "4", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "4", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "6", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "2", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Naeglaria_Weapon_I",
+        "id": "309ccf5c-3505-d874-379f-aa1fd0a35741",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Starboard/Port", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "4", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "5", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "-", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Infestation", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Naeglaria_Weapon_II",
+        "id": "b358d582-132f-48cb-c083-17a92a497d5d",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "6", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "8", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "5", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Infestation", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Naeglaria_Weapon_III",
+        "id": "b9887c79-87cc-8892-89d4-06c6a4f717c1",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Any", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "7", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "7", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "8", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Torpedo", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "12\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      },
+      {
+        "name": "Stem",
+        "id": "12a388eb-b927-bc11-62df-0f9382596357",
+        "hidden": false,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Captured_Small", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "3", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "5", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "11", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "2", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "2", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "1", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "2", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "0", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "0", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Stem_Weapon_I",
+        "id": "85819e60-f72d-9187-bc69-a0f8368149e6",
+        "hidden": false,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Fore", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "1", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "2", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "-", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "-", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Primary", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "8\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      }
+    ],
+    "sharedRules": [
+      {
+        "name": "Ambush",
+        "id": "bae37eef-fb25-0a12-54b7-9327d7335920",
+        "description": "A Squadron with the Ambush MAR may be deployed using the Hidden Set-Up rules.\nHowever, rather than only having one Hidden Set-Up Marker, you may place a number of Markers equal to the value of this MAR on the Board. Only one of these Markers has the Squadron name recorded on it, the others are left blank. When a blank Marker is revealed, nothing happens – the Marker is simply discarded.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Beam Weapons",
+        "id": "95891eb6-0a90-47f7-d896-ce77467b1424",
+        "description": "Coherence Effect - If ALL weapons involved in an attack are Beam Weapons and the target is within 10\" of all attacking models, any rolls of 1 in the initial roll may be Re-Rolled.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Bigger Batteries",
+        "id": "5f5c603b-8e76-8932-a300-2e858565c809",
+        "description": "The Point Defense systems on a model with Bigger Batteries have a Range of 8” instead of 4”. This also increases the range of Attacks using the Point Defense Barrage MAR.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Biohazard",
+        "id": "c3847bd0-4cfe-409f-fbe7-8af46f4ad5dc",
+        "description": "Coherence Effect - If ALL Weapons contributing to an Attack have Biohazard Ammo, and the number of hits equals or exceeds the Damage Rating (DR) of the target model, the target model loses 1 Crew Point, in addition to any other effects.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Countermeasures",
+        "id": "aa607d7e-e8cd-2f76-b5ed-fcd277712618",
+        "description": "Any enemy model within 8” of one or more models with Countermeasures requires one additional success to pass any Command Checks.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Decimator Warheads",
+        "id": "31e51a8a-c994-e854-fd62-1a5547bbab3a",
+        "description": "Coherence Effect - If all Weapons contributing to an Attack have the Decimator Warheads MAR and the Attack equals or exceeds the target’s CR, the target Squadron must take an immediate Disorder Check.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Deck Crews",
+        "id": "9033f0c7-1501-30ee-7d69-2f9c2bf3844f",
+        "description": "A model with Deck Crew may roll a D6 during the Command Segment of its activation. On a result of 4, 5 or 6 take ONE previously Destroyed Wing and return it to a SRS Token that is currently on this model. The model’s maximum Wing complement and the maximum number of Wings in a SRS Token CANNOT be exceeded.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Difficult Target",
+        "id": "9f8775a8-9c70-d197-93f4-39a124fd1b8a",
+        "description": "If a Capital Class model makes a ranged attack against a Difficult Target, their Attack Dice will suffer a -1 ‘to hit’ modifier. Most commonly, this will mean that their Attack Dice will only score hits on a 5 or 6.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Dirty Secrets",
+        "id": "de9f2f94-73a0-e023-4c70-1f327f2e50b7",
+        "description": "For each model in your Fleet with Dirty Secrets, once per game, when an opponent attempts to use a Tactical Ability Card, you may choose to lower your Battle Log by one to cancel the effects of the Card. The Card is discarded, and any effects, including any required Battle Log adjustment, are ignored.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Elite Crew",
+        "id": "b79cfe64-0c8e-80d5-beb0-3ababef29568",
+        "description": "A model with Elite Crew receives a +1 ‘to hit’ modifier on all dice rolled to take Command Checks. When a Squadron (rather than a particular model) takes a Command Check, unless all models within the Squadron have this MAR, the effect is lost. Escort Type models are ignored for this purpose. This does not effect Command Tests taken for Hidden Set-Up.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Hidden Killer",
+        "id": "9b93fb85-c72d-ac0a-51c0-c59789d77cbe",
+        "description": "A Hidden Killer CANNOT be targeted by ANY weapons firing from further than 20” if it is at a Full Stop.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "High Energy",
+        "id": "699eaed2-84c7-7342-d194-18b8278e4f7b",
+        "description": "Coherence Effect - If all Weapons contributing to an Attack have the High Energy MAR and the attack equals or exceeds the target’s Damage Rating, the target gains a Hazard Marker in addition to any other effects.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Impervious",
+        "id": "d629349a-57a1-6e82-7f9d-3b36350231be",
+        "description": "To Capture a model with Impervious, a Boarding Assault must roll successes equal to or in excess of TRIPLE the model’s current Crew Point total.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Infestation",
+        "id": "85b226a2-ef95-d791-30cb-e52d2d27d060",
+        "description": "A model with the Infestation MAR gains a ‘Boarding Assault Launched’ Marker after launching a boarding assault as normal, but at the end of its next activation this marker is removed, and the model may perform another Boarding Assault if desired during its following activation. It may also never be captured by a boarding assault, only damaged or destroyed. Additionally, if a model with the Infestation MAR chooses to Capture another model in a Boarding Assault, that model immediately replaces its stats with those of the Captured Pathogen model in its size class, with current HP and FW the lower of either of the ships at time of capture, or the new Pathogen Class ship – this applies even if the target of the Boarding Assault is a Small vessel that would ordinarily be destroyed. It joins the Squadron of the model which captured it, and is not required to charge its Fold Space Drives when it next activates. If the Squadron that initiated the Boarding Assault now exceeds its unit size or legal composition, it will split into 2 squadrons, sized as the Pathogen player chooses within the legal composition limits.",
+        "hidden": false
+      },
+      {
+        "name": "Infestation Weapons",
+        "id": "6b16fbed-b0d1-9470-4f3b-f3f1998fc4bb",
+        "description": "Infestation Weapons (Coherence Effect) :\nIf ALL Weapons contributing to an Attack are Infestation Weapons, the attacking ship does not count as having fired at the target for the purposes of boarding, and may launch a boarding assault directed at the target during the same activation.",
+        "hidden": false
+      },
+      {
+        "name": "Kinetic Weapons",
+        "id": "e4354ab9-2d5a-dfae-b538-6895ce55159e",
+        "description": "Coherence Effect - If ALL weapons involved in the attack are Kinetic weapons and the attack equals or exceeds the target’s Critical Rating, the attacker may add +1 to the result of the roll on the critical hit table. If the Attack causes multiple Critical Hits, you may choose separately for each roll on the Critical Hit Table made.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Maneuverable",
+        "id": "a179a134-3d9a-ea12-d578-98b3549ea009",
+        "description": "If a Maneuverable model is at a Full Stop, it can rotate up to 90 degrees around its Flight Peg during the Secondary Movement segment of its activation.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Nuclear Weapons",
+        "id": "5ff2ade3-3ce6-a88e-d55c-e7d787a00d9e",
+        "description": "Coherence Effect - If ALL weapons involved in an attack are Nuclear Weapons and the attack causes a Critical Hit, every model whose Flight Peg is within 4” of the target’s Flight Peg suffers an attack with HALF the Attack Dice of the initial attack.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Ops Center",
+        "id": "026e0d99-5c5e-6e3a-36ec-a9859c087117",
+        "description": "If a model with the Ops Centre MAR is your Fleet Admiral’s Vessel you may take an additional TAC at no extra cost.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Pathogen SRS",
+        "id": "c90318fc-71fa-e6d9-8359-a4f5bbb15228",
+        "description": "Cost: 10 Points\n12\" Range, AD 2; AP 2; PD 2,\n\nCan use intercept vs SRS and if they destroy an enemy SRS token without being driven off or destroyed they regenerate 1 SRS (cannot exceed starting size). \n\nAdditionally, if the SRS are involved in a boarding assault which results in the capture of an enemy ship, that ship is captured according to the rules in the Infestation MAR, and joins the SRS’ parent carriers squadron.",
+        "hidden": false,
+        "page": 29,
+        "publicationId": "d8e0b405--pub1"
+      },
+      {
+        "name": "Precision Strike",
+        "id": "c6cf24a2-4dc4-244e-2a34-79155f46fe0e",
+        "description": "Coherence Effect - If ALL weapons contributing to a Targeted Strike have Precision Strike, you may choose to add +1 to the result on the Targeted Strike Damage Table.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Quick Launch",
+        "id": "aea705fe-9c9d-8ad2-a754-9169b0a03f75",
+        "description": "When Launched from a Carrier with Quick Launch, SRS Tokens may be placed anywhere within the Carrier’s Command Distance, they are not restricted to being placed in contact with it.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Sector Shielding",
+        "id": "dba5db98-4bb6-48dc-de4f-e90d85905fba",
+        "description": "During the Command Segment of its activation a model with Sector Shielding may nominate ONE direction, either the Fore, Aft, Port or Starboard 90 degree Arc of Fire, and increase its Shield Rating by 1 against any Attack from that direction.\nThe bonus is applied if the Flight Pegs of all firing models contributing to the Attack are entirely within the target model’s nominated 90 degree Arc of Fire.\n\nThe model’s Shield Rating is reduced by 1 against any Attack NOT from the nominated direction. The Shield Rating on the model will return to its original value at the beginning of the Command Segment of is next activation.\nA model may be deployed with Sector Shielding engaged, nominate the direction at the time of deployment.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Self Repair",
+        "id": "e08bb9c9-c0f0-9f23-31fe-39fb65f92f75",
+        "description": "If a model with Self Repair does not have a Cloaking Field activated, it may restore 1 lost Hull Point on a D6 roll of a 4, 5 or 6. This roll is made at the end of the model’s activation. A model may only attempt this once per Turn and it cannot be used to increase a model’s Hull Points beyond its starting total.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Special Forces",
+        "id": "5893402a-168a-a752-5ec1-e77685b29b55",
+        "description": "If all the models initiating a Boarding Assault have Special Forces, their Assault Point Dice receive a +1 ‘to hit’ modifier.\nIf a model with Special Forces is the target of a Boarding Assault, the Assault Point Dice of the initiating models receive a -1 ‘to hit’ modifier.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Split Fire",
+        "id": "ef4e2b68-0a64-3724-ff58-48c027420ff9",
+        "description": "A Weapon with the Split Fire MAR may declare an Attack against any number of targets in its Arc of Fire and a single Attack Dice Range Band. It must divide its Attack Dice as evenly as possible between these Attacks. This cannot be used in conjunction with any Firing Options.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Stealth Systems",
+        "id": "11563c5e-f4a3-b271-c920-7a8dc9d2458c",
+        "description": "Any Attack against a model with the Stealth Systems MAR must re-roll ALL successful rolls if any weapon in the Attack is firing from further than 20”. This re-roll is performed BEFORE any extra rolls for Exploding Dice, and before Hits are discounted by Shield Systems or Point Defense. Only ONE dice is re-rolled for any 6’s scored. The second result MUST be accepted.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Superior Design",
+        "id": "6cce4f01-cb00-575f-630e-bef9777c0dca",
+        "description": "If this model suffers any Critical Hit Effect, the loss of any Crew Points is reduced by HALF (rounded down, to a minimum of one). This model NEVER gains a Hazard Marker as the result of a Critical Hit Effect or Targeted Strike, however it can gain them from other sources.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Target Resolution",
+        "id": "92262bfe-e4e1-70d6-a9f1-ec16245cb383",
+        "description": "A model with Target Resolution may forgo making any attacks in the Combat Segment of its activation to assist another model in its Squadron in making an attack.\n\nOnce per Turn, when a model in its Squadron is about to resolve a Ranged Attack, a model with Target Resolution may take a Command Check. Any other models in its Squadron which also have Target Resolution may elect to assist it. For every assisting model one less success is required to pass the Command Check (to a minimum of one), whilst for every full 8” between the firing model and its target, one additional success is required.\n\nIf the Test is passed, the firing model receives a +1 ‘to hit’ modifier for the attack.\nOnly one Target Resolution attempt may be made for any one attack.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Torpedo Spook",
+        "id": "57f96d9f-cbcc-1354-5af0-98b8f243d21c",
+        "description": "If ALL models contributing to a Torpedo Attack have the Torpedo Spook MAR, all successful Point Defense rolls against this attack MUST be Re-Rolled. This re-roll is performed BEFORE any extra rolls for Exploding Dice, and before Hits are discounted by Shield Systems or Point Defense. Only ONE dice is re-rolled for any 6’s scored. The second result MUST be accepted.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Unmanned",
+        "id": "f0cee280-4e88-d908-5b02-0a81514558e1",
+        "description": "An Unmanned model does not suffer Crew Loss penalties for having zero Crew.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Weapon Shielding",
+        "id": "e6e4a3e0-5a30-c853-c3c7-9aca9ba2245d",
+        "description": "A model with the Weapon Shielding MAR only reduces the Attack Dice values of its Weapon Systems by ONE for every TWO points of Hull Damage it has suffered.",
+        "hidden": false,
+        "page": 0
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "Aureus",
+        "id": "7cf5-098f-9d34-4241",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 20}],
+        "infoLinks": [
+          {"id": "06b7-f463-3a20-24f1", "hidden": false, "targetId": "9f8775a8-9c70-d197-93f4-39a124fd1b8a", "type": "rule"},
+          {"id": "bc02-448c-ccbb-9271", "hidden": false, "targetId": "85b226a2-ef95-d791-30cb-e52d2d27d060", "type": "rule"},
+          {"id": "82ec-0d88-5f16-1d1c", "hidden": false, "targetId": "f0cee280-4e88-d908-5b02-0a81514558e1", "type": "rule"},
+          {"id": "56a4-1ab6-499d-fa11", "hidden": false, "targetId": "6b16fbed-b0d1-9470-4f3b-f3f1998fc4bb", "type": "rule"},
+          {"id": "f7de-0c92-5d46-b917", "hidden": false, "targetId": "a9fa8097-71fe-97ca-d339-ad011ec3f736", "type": "profile"},
+          {"id": "e91f-b3e5-9ee4-40d5", "hidden": false, "targetId": "fe1a60f9-ecba-2de3-0bd3-4f671021b0e8", "type": "profile"}
+        ]
+      },
+      {
+        "name": "Botulinus",
+        "id": "0569-6264-acbc-a680",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 175}],
+        "infoLinks": [
+          {"id": "6e0d-d056-44cb-d372", "hidden": false, "targetId": "85b226a2-ef95-d791-30cb-e52d2d27d060", "type": "rule"},
+          {"id": "6335-b3c0-b063-592e", "hidden": false, "targetId": "e08bb9c9-c0f0-9f23-31fe-39fb65f92f75", "type": "rule"},
+          {"id": "84d7-9107-3374-44a6", "hidden": false, "targetId": "6b16fbed-b0d1-9470-4f3b-f3f1998fc4bb", "type": "rule"},
+          {"id": "631c-bb3b-bc26-550b", "hidden": false, "targetId": "f0cee280-4e88-d908-5b02-0a81514558e1", "type": "rule"},
+          {"id": "2514-185b-7357-089b", "hidden": false, "targetId": "bfe9098d-62c7-1c2f-2809-3e2f372a227c", "type": "profile"},
+          {"id": "a2da-28ac-78b4-10fb", "hidden": false, "targetId": "0fb71fae-cdb0-5c2d-e63d-988bef57f5af", "type": "profile"},
+          {
+            "id": "df8d-5b6c-db03-59b7",
+            "hidden": false,
+            "targetId": "c9f80b91-6ad5-e9e8-80a7-f1d611ace845",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "name",
+                "type": "set",
+                "value": "Biohazard_Ammmo",
+                "repeats": [
+                  {
+                    "childId": "768f-8253-c01b-e06d",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "0569-6264-acbc-a680",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "0abf-de43-c49f-644b", "hidden": false, "targetId": "38075ed8-773d-b4ce-fb22-f791ca90584b", "type": "profile"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Wings",
+            "id": "d2ab-e1ee-95b5-1eb2",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "maxPoints",
+                "field": "points",
+                "includeChildForces": false,
+                "includeChildSelections": true,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 30
+              }
+            ],
+            "entryLinks": [{"id": "2fba-16e4-3ec0-6ac1", "hidden": false, "targetId": "a76e-4c19-023e-1dbf", "type": "selectionEntryGroup"}]
+          },
+          {
+            "name": "Upgrades",
+            "id": "93d2-bf98-7b6c-a6a5",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Biohazard Torpedos and Mines",
+                "id": "768f-8253-c01b-e06d",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "04e9-480d-d0e9-dffb", "hidden": false, "targetId": "c3847bd0-4cfe-409f-fbe7-8af46f4ad5dc", "type": "rule"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chaga",
+        "id": "e452-5d19-383a-385a",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 55}],
+        "infoLinks": [
+          {"id": "2d9c-7169-b6c6-3157", "hidden": false, "targetId": "85b226a2-ef95-d791-30cb-e52d2d27d060", "type": "rule"},
+          {"id": "b28f-fef6-355f-5f95", "hidden": false, "targetId": "e08bb9c9-c0f0-9f23-31fe-39fb65f92f75", "type": "rule"},
+          {"id": "7455-684f-78c4-aec9", "hidden": false, "targetId": "f0cee280-4e88-d908-5b02-0a81514558e1", "type": "rule"},
+          {
+            "id": "b797-1956-5fe5-74a3",
+            "hidden": false,
+            "targetId": "16aa0df5-c752-b1b2-26bd-88a7f68ea267",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "name",
+                "type": "set",
+                "value": "Biohazard_Ammo",
+                "repeats": [
+                  {
+                    "childId": "7f6e-344e-9ec3-0e30",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "e452-5d19-383a-385a",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "668e-0f22-1342-6ef1", "hidden": false, "targetId": "a7dd163d-5250-ffeb-786b-b697ed793662", "type": "profile"},
+          {"id": "0658-7d11-de2e-5bee", "hidden": false, "targetId": "b93abd57-35f8-9835-2027-8bd09d163484", "type": "profile"},
+          {"id": "84e3-8b31-ebb4-eb51", "hidden": false, "targetId": "e65f5f56-01a3-234b-3620-22b4f41b571d", "type": "profile"},
+          {"id": "8c94-8ceb-8070-b44e", "hidden": false, "targetId": "6b16fbed-b0d1-9470-4f3b-f3f1998fc4bb", "type": "rule"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Upgrades",
+            "id": "62b4-c5cd-a5f4-eebc",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Biohazard Torpedos and Mines",
+                "id": "7f6e-344e-9ec3-0e30",
+                "collective": true,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "7d6e-8658-ae44-b968", "hidden": false, "targetId": "c3847bd0-4cfe-409f-fbe7-8af46f4ad5dc", "type": "rule"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Contagion",
+        "id": "9ddd-e415-9d89-248e",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 80}],
+        "infoLinks": [
+          {"id": "ca2d-bb36-54ce-7980", "hidden": false, "targetId": "85b226a2-ef95-d791-30cb-e52d2d27d060", "type": "rule"},
+          {"id": "ed0b-a7fa-001c-f394", "hidden": false, "targetId": "f0cee280-4e88-d908-5b02-0a81514558e1", "type": "rule"},
+          {"id": "8e4b-c3a5-df4d-b8cb", "hidden": false, "targetId": "bd4bf38e-5e85-4352-3020-fe0b96d595db", "type": "profile"},
+          {"id": "5cbe-ec00-236a-2961", "hidden": false, "targetId": "eb94ab4b-4071-d10a-f28b-92a2aca4d3f5", "type": "profile"},
+          {"id": "a01b-221d-e255-e260", "hidden": false, "targetId": "21dba64a-29d9-7b9e-a198-318f9bc758f1", "type": "profile"},
+          {"id": "40fb-9343-ca7b-cf8a", "hidden": false, "targetId": "dbca63a6-6474-7275-e4cc-aaa083033d03", "type": "profile"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Wings",
+            "id": "46d6-3435-f05a-ea27",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "maxPoints",
+                "field": "points",
+                "includeChildForces": false,
+                "includeChildSelections": true,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 30
+              }
+            ],
+            "entryLinks": [{"id": "0bf1-cee7-489d-d229", "hidden": false, "targetId": "a76e-4c19-023e-1dbf", "type": "selectionEntryGroup"}]
+          }
+        ]
+      },
+      {
+        "name": "Hanta",
+        "id": "d22d-1540-e741-fecd",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 270}],
+        "infoLinks": [
+          {"id": "f85e-3d24-b224-1b3b", "hidden": false, "targetId": "e08bb9c9-c0f0-9f23-31fe-39fb65f92f75", "type": "rule"},
+          {"id": "e84d-1530-79c1-5b61", "hidden": false, "targetId": "f0cee280-4e88-d908-5b02-0a81514558e1", "type": "rule"},
+          {"id": "b92a-4ec2-a4db-5c25", "hidden": false, "targetId": "85b226a2-ef95-d791-30cb-e52d2d27d060", "type": "rule"},
+          {"id": "8497-654a-d613-0b8e", "hidden": false, "targetId": "6b16fbed-b0d1-9470-4f3b-f3f1998fc4bb", "type": "rule"},
+          {"id": "06d4-5fc8-44c0-aa04", "hidden": false, "targetId": "7c089e4b-9d54-89ec-3a0e-0aa6c176f0e2", "type": "profile"},
+          {"id": "e1bd-5b7d-7c49-d25e", "hidden": false, "targetId": "2ecec835-5f63-086e-5594-9f847abe623b", "type": "profile"},
+          {
+            "id": "c8fd-e40e-fca4-d3de",
+            "hidden": false,
+            "targetId": "6f477e71-4c2a-ef32-d8b2-8e0b140a6f47",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "name",
+                "type": "set",
+                "value": "Biohazard_Ammo",
+                "repeats": [
+                  {
+                    "childId": "ba23-1cfd-0607-3500",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "d22d-1540-e741-fecd",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "1561-adb7-7059-c41e", "hidden": false, "targetId": "092838ad-17a4-0fe5-f2e2-8bdfb20e44d4", "type": "profile"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Upgrades",
+            "id": "e320-ebe6-464f-c081",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Biohazard Torpedos and Mines",
+                "id": "ba23-1cfd-0607-3500",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "77f8-3b46-1a05-f6ac", "hidden": false, "targetId": "c3847bd0-4cfe-409f-fbe7-8af46f4ad5dc", "type": "rule"}]
+              }
+            ]
+          },
+          {
+            "name": "Wings",
+            "id": "99b8-39b3-c287-f84c",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "maxPoints",
+                "field": "points",
+                "includeChildForces": false,
+                "includeChildSelections": true,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 30
+              }
+            ],
+            "entryLinks": [{"id": "5c66-d7c6-d58d-da39", "hidden": false, "targetId": "a76e-4c19-023e-1dbf", "type": "selectionEntryGroup"}]
+          }
+        ]
+      },
+      {
+        "name": "Mitosis",
+        "id": "4040-a9ad-a53b-a3c7",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 40}],
+        "infoLinks": [
+          {"id": "9373-48c9-a01a-bc50", "hidden": false, "targetId": "f0cee280-4e88-d908-5b02-0a81514558e1", "type": "rule"},
+          {"id": "b955-7be9-ded3-8824", "hidden": false, "targetId": "85b226a2-ef95-d791-30cb-e52d2d27d060", "type": "rule"},
+          {"id": "ebfa-5d00-bb29-1f10", "hidden": false, "targetId": "d87aa97f-94db-be14-36c5-1416b3af56b6", "type": "profile"},
+          {"id": "d1e2-fea0-a9db-6843", "hidden": false, "targetId": "62daaae9-33db-356e-c637-37db54c32ca1", "type": "profile"},
+          {"id": "3e7a-61b7-8a0d-d25b", "hidden": false, "targetId": "74ec7e32-0849-cd12-8903-9b8c60142ead", "type": "profile"},
+          {"id": "9213-689d-2cd4-5c04", "hidden": false, "targetId": "e0e13423-fe13-1161-7a5d-fc6ff5f57a9c", "type": "profile"}
+        ]
+      },
+      {
+        "name": "Naeglaria",
+        "id": "e933-2a92-35b7-fcd1",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 100}],
+        "infoLinks": [
+          {"id": "2a80-9668-7a06-e13e", "hidden": false, "targetId": "b358d582-132f-48cb-c083-17a92a497d5d", "type": "profile"},
+          {"id": "f5b0-b89b-3ae6-6f6a", "hidden": false, "targetId": "e08bb9c9-c0f0-9f23-31fe-39fb65f92f75", "type": "rule"},
+          {"id": "3407-fec9-ba4b-1fc2", "hidden": false, "targetId": "85b226a2-ef95-d791-30cb-e52d2d27d060", "type": "rule"},
+          {"id": "1a86-ad4e-dce9-abd7", "hidden": false, "targetId": "816fdbe4-0e40-5227-f52c-0fc07276ccba", "type": "profile"},
+          {"id": "3e41-ea8e-9c34-c52c", "hidden": false, "targetId": "6b16fbed-b0d1-9470-4f3b-f3f1998fc4bb", "type": "rule"},
+          {"id": "f888-1867-abf0-ce7f", "hidden": false, "targetId": "309ccf5c-3505-d874-379f-aa1fd0a35741", "type": "profile"},
+          {
+            "id": "3949-1b8c-000b-0d9c",
+            "hidden": false,
+            "targetId": "b9887c79-87cc-8892-89d4-06c6a4f717c1",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "name",
+                "type": "set",
+                "value": "Biohazard_Ammo",
+                "repeats": [
+                  {
+                    "childId": "1946-9313-2f6b-8fec",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "e933-2a92-35b7-fcd1",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {"id": "4854-2a86-2f79-2583", "hidden": false, "targetId": "f0cee280-4e88-d908-5b02-0a81514558e1", "type": "rule"}
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Wings",
+            "id": "b2f6-ea44-f726-924f",
+            "collective": false,
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              },
+              {
+                "id": "maxPoints",
+                "field": "points",
+                "includeChildForces": false,
+                "includeChildSelections": true,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 60
+              }
+            ],
+            "entryLinks": [{"id": "879c-7698-6522-fb6b", "hidden": false, "targetId": "a76e-4c19-023e-1dbf", "type": "selectionEntryGroup"}]
+          },
+          {
+            "name": "Upgrades",
+            "id": "8763-0490-d1c7-dc91",
+            "collective": false,
+            "hidden": false,
+            "selectionEntries": [
+              {
+                "name": "Biohazard Torpedos and Mines",
+                "id": "1946-9313-2f6b-8fec",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 5}],
+                "infoLinks": [{"id": "bd3f-eaa1-831e-d251", "hidden": false, "targetId": "c3847bd0-4cfe-409f-fbe7-8af46f4ad5dc", "type": "rule"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Stem",
+        "id": "ca18-c5f1-d873-571e",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 15}],
+        "infoLinks": [
+          {"id": "5a67-d327-15f5-9f38", "hidden": false, "targetId": "9f8775a8-9c70-d197-93f4-39a124fd1b8a", "type": "rule"},
+          {"id": "9067-486f-12dd-c913", "hidden": false, "targetId": "85b226a2-ef95-d791-30cb-e52d2d27d060", "type": "rule"},
+          {"id": "f5cb-0233-9b57-5a1c", "hidden": false, "targetId": "f0cee280-4e88-d908-5b02-0a81514558e1", "type": "rule"},
+          {"id": "ecc0-5ffb-2e9c-3ed7", "hidden": false, "targetId": "85819e60-f72d-9187-bc69-a0f8368149e6", "type": "profile"},
+          {"id": "66e2-a17a-e694-4405", "hidden": false, "targetId": "12a388eb-b927-bc11-62df-0f9382596357", "type": "profile"}
+        ]
+      }
+    ],
+    "sharedSelectionEntryGroups": [
+      {
+        "name": "Aureus Accompaniments",
+        "id": "c96e-a5e9-0b65-c6f3",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Mitosis",
+            "id": "5b83-c281-219a-f9a8",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "model",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [{"id": "f651-9d5f-acef-fbd9", "hidden": false, "targetId": "4040-a9ad-a53b-a3c7", "type": "selectionEntry"}]
+          },
+          {
+            "name": "Stem",
+            "id": "0d45-4db7-a9cf-b45b",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "9c63-08e8-9151-f025",
+                "hidden": false,
+                "targetId": "ca18-c5f1-d873-571e",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 4}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Botulinus Accompaniments",
+        "id": "adf3-e7d7-ef63-437a",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Mitosis",
+            "id": "680e-ce95-ee21-e8e8",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "model",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "5526-3c16-6981-dd0a",
+                "hidden": false,
+                "targetId": "4040-a9ad-a53b-a3c7",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 2}]
+              }
+            ]
+          },
+          {
+            "name": "Stem",
+            "id": "780f-eadc-041e-9168",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "6e0a-4288-ca36-c804",
+                "hidden": false,
+                "targetId": "ca18-c5f1-d873-571e",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 3}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chaga Accompaniments",
+        "id": "4de8-20c7-b5f7-7b02",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Mitosis",
+            "id": "694f-387d-240b-4f62",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "model",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "5dc9-7509-48b2-2dd8",
+                "hidden": false,
+                "targetId": "4040-a9ad-a53b-a3c7",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 2}]
+              }
+            ]
+          },
+          {
+            "name": "Stem",
+            "id": "9972-6da8-81fd-1819",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "4c71-df72-c471-d1d0",
+                "hidden": false,
+                "targetId": "ca18-c5f1-d873-571e",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 4}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Contagion Accompaniments",
+        "id": "d365-7d61-0a72-13c8",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Mitosis",
+            "id": "e222-0ee9-2ff7-9859",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "model",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "89fa-8248-6000-81fd",
+                "hidden": false,
+                "targetId": "4040-a9ad-a53b-a3c7",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 2}]
+              }
+            ]
+          },
+          {
+            "name": "Stem",
+            "id": "ac59-3995-fd02-eb12",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "7a0a-d44d-1fd8-5482",
+                "hidden": false,
+                "targetId": "ca18-c5f1-d873-571e",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 4}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hanta Accompaniments",
+        "id": "4a3b-acaf-f827-1ce3",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Mitosis",
+            "id": "bffa-b67e-f670-e3ff",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "model",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [{"id": "7320-0c6b-5833-794f", "hidden": false, "targetId": "4040-a9ad-a53b-a3c7", "type": "selectionEntry"}]
+          },
+          {
+            "name": "Stem",
+            "id": "debb-96ac-4f52-2906",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "2eeb-e796-9fc4-3736",
+                "hidden": false,
+                "targetId": "ca18-c5f1-d873-571e",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 3}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mitosis Accompaniments",
+        "id": "ceba-8542-be45-28f3",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Stem",
+            "id": "e339-4d0b-5842-fa9e",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "fd4e-fc7c-29ff-052a",
+                "hidden": false,
+                "targetId": "ca18-c5f1-d873-571e",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 4}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Naeglaria Accompaniments",
+        "id": "0d16-c8c3-081e-3237",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Mitosis",
+            "id": "2461-b305-3e23-aebc",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "model",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "de18-5c6a-4693-728a",
+                "hidden": false,
+                "targetId": "4040-a9ad-a53b-a3c7",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 2}]
+              }
+            ]
+          },
+          {
+            "name": "Stem",
+            "id": "b415-415d-ba9b-3877",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "entryLinks": [
+              {
+                "id": "9fb5-428f-9736-5c99",
+                "hidden": false,
+                "targetId": "ca18-c5f1-d873-571e",
+                "type": "selectionEntry",
+                "modifiers": [{"field": "maxSelections", "type": "set", "value": 4}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pathogen SRS Token",
+        "id": "a76e-4c19-023e-1dbf",
+        "collective": false,
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInForce",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "force",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": -1
+          },
+          {
+            "id": "minPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "maxPoints",
+            "field": "points",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": -1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Pathogen SRS",
+            "id": "d07e-9158-f440-2879",
+            "collective": false,
+            "hidden": false,
+            "page": 0,
+            "type": "model",
+            "constraints": [
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 2
+              }
+            ],
+            "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+            "infoLinks": [
+              {"id": "03c2-abf1-7a91-f5e7", "hidden": false, "targetId": "c90318fc-71fa-e6d9-8359-a4f5bbb15228", "type": "rule"},
+              {"id": "2099-be1c-0a82-89cd", "hidden": false, "targetId": "c56e-292f-0d42-170b", "type": "profile"}
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wing",
+                "id": "b01c-0252-baf6-c485",
+                "collective": false,
+                "hidden": false,
+                "selectionEntries": [
+                  {
+                    "name": "Pathogen SRS",
+                    "id": "1faf-c68b-4dec-cd3e",
+                    "collective": false,
+                    "hidden": false,
+                    "type": "upgrade",
+                    "constraints": [
+                      {
+                        "id": "minSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "min",
+                        "value": 1
+                      },
+                      {
+                        "id": "maxSelections",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": false,
+                        "type": "max",
+                        "value": 6
+                      }
+                    ],
+                    "costs": [{"name": "pts", "typeId": "points", "value": 10}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

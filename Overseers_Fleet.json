@@ -1,0 +1,399 @@
+{
+  "catalogue": {
+    "name": "Overseers Fleet",
+    "id": "b97a-2104-c6f9-5a48",
+    "authorContact": "steve_990@hotmail.com",
+    "authorName": "Steve_990",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "417a1fa3-3f8e-7789-d5ec-a4ebd35323cd",
+    "gameSystemRevision": 18,
+    "revision": 4,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
+    "publications": [{"name": "Return of the Overseers", "id": "b97a-2104-pub1"}],
+    "selectionEntries": [
+      {
+        "name": "Anathema Probe",
+        "id": "d0b5-0a0d-2a4b-39e6",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "d0b5-0a0d-2a4b-39e6-9491469f-4e1a-978c-e141-b7f12a6a7b91", "primary": true, "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "5aeb-3804-c15a-3ba4",
+            "collective": false,
+            "defaultSelectionEntryId": "d4a9-f6cb-5903-cc69",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Anathema Probe",
+                "id": "d4a9-f6cb-5903-cc69",
+                "collective": false,
+                "hidden": false,
+                "page": 0,
+                "type": "model",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [{"id": "c43b-ae71-1d11-e63b", "hidden": false, "targetId": "74a4-c4c8-0eec-3b30", "type": "selectionEntry"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dimensional Gate",
+        "id": "6855-edd7-2850-5e54",
+        "collective": false,
+        "hidden": false,
+        "page": 0,
+        "type": "unit",
+        "categoryLinks": [{"id": "6855-edd7-2850-5e54-9491469f-4e1a-978c-e141-b7f12a6a7b91", "primary": true, "targetId": "9491469f-4e1a-978c-e141-b7f12a6a7b91"}],
+        "constraints": [
+          {
+            "id": "maxInRoster",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": true,
+            "percentValue": false,
+            "scope": "roster",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "selectionEntryGroups": [
+          {
+            "name": "Ship Class",
+            "id": "8194-b806-ed6a-4e6d",
+            "collective": false,
+            "defaultSelectionEntryId": "e183-2864-9677-296e",
+            "hidden": false,
+            "constraints": [
+              {
+                "id": "minSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "min",
+                "value": 1
+              },
+              {
+                "id": "maxSelections",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": false,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Dimensional Gate",
+                "id": "e183-2864-9677-296e",
+                "collective": false,
+                "hidden": false,
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "minSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "min",
+                    "value": 1
+                  },
+                  {
+                    "id": "maxSelections",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": false,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+                "entryLinks": [{"id": "84d3-4624-1544-3830", "hidden": false, "targetId": "8c4c-47ab-4b82-ccc8", "type": "selectionEntry"}]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sharedProfiles": [
+      {
+        "name": "Anathema",
+        "id": "9a34-1674-e9b7-ed86",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Probe", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "8", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "12", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "2", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "5", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "0", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "0", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "0", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "10", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "0", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Dimensional_Gate",
+        "id": "5613-7238-7fb3-62f4",
+        "hidden": false,
+        "page": 0,
+        "typeId": "601947e0-0125-7417-9d3a-5e3caf6e031d",
+        "characteristics": [
+          {"name": "Designation", "$text": "Gate", "typeId": "c06bce22-dd79-5941-f499-07552e47c604"},
+          {"name": "DR", "$text": "10(6)", "typeId": "b06bce22-dd79-5941-f499-07552e47c603"},
+          {"name": "CR", "$text": "16(12)", "typeId": "45a72717-f553-eda0-574a-ed9c863706e4"},
+          {"name": "Mv", "$text": "0", "typeId": "37d832b5-effe-31e5-3d80-be0e0f0facaa"},
+          {"name": "HP", "$text": "10", "typeId": "38ce15ef-6608-ccd3-d7c1-b01ee9c81ffa"},
+          {"name": "CP", "$text": "10", "typeId": "98e41e8c-6557-e695-6a0e-87db5a68f78c"},
+          {"name": "AP", "$text": "0", "typeId": "12cafa00-4b8f-fce7-d690-eb7a2d7be421"},
+          {"name": "PD", "$text": "0", "typeId": "4f478de8-54c8-4f22-5cbc-6b00963ccce1"},
+          {"name": "MN", "$text": "0", "typeId": "2a062323-777d-a32b-b604-0b133e93fd1e"},
+          {"name": "Sh", "$text": "10(2)", "typeId": "0068d495-66ca-6446-f906-63ed81c88477"},
+          {"name": "WC", "$text": "0", "typeId": "93537291-d3e3-5ccb-ec44-a5770b0a2a61"},
+          {"name": "TL", "$text": "0", "typeId": "450d4be0-47db-8bc4-b15b-118250ac9615"}
+        ]
+      },
+      {
+        "name": "Dimensional_Gate_Weapon_I",
+        "id": "6365-e162-42ff-ee91",
+        "hidden": false,
+        "page": 0,
+        "typeId": "b43e-2222-4230-3aac",
+        "typeName": "Weapon",
+        "characteristics": [
+          {"name": "Arc", "$text": "Any", "typeId": "7ec8-b63f-42a4-9d40"},
+          {"name": 1, "$text": "3", "typeId": "12f4d7d4-ce09-7c6c-2b69-7d2dd3baf892"},
+          {"name": 2, "$text": "2", "typeId": "9cb66a39-5ffc-c785-5c2e-7e68e7e7dd32"},
+          {"name": 3, "$text": "2", "typeId": "dc0770ac-599e-1efc-fbca-37fb2fb088cb"},
+          {"name": 4, "$text": "1", "typeId": "27dc470e-85e8-929a-80ed-7058a163b995"},
+          {"name": "Category", "$text": "Dimensional_Pulse", "typeId": "88222587-060a-9230-b947-2bffa3b052dd"},
+          {"name": "Incr.", "$text": "10\"", "typeId": "248f72a0-5e87-27c8-4bda-b57f623ab04f"},
+          {"name": "MARs", "typeId": "f67f-5825-72ff-a4f4"}
+        ]
+      }
+    ],
+    "sharedRules": [
+      {
+        "name": "Anathema Beam",
+        "id": "c9d4-8f77-0a00-1e0b",
+        "description": "Any ships in Fore arc require one additional success to pass the effects of the Dimensional Pulse. Range is unlimited.",
+        "hidden": false,
+        "page": 25,
+        "publicationId": "b97a-2104-pub1"
+      },
+      {
+        "name": "Difficult Target",
+        "id": "d23f-f626-1592-885a",
+        "description": "If a Capital Class model makes a ranged attack against a Difficult Target, their Attack Dice will suffer a -1 ‘to hit’ modifier. Most commonly, this will mean that their Attack Dice will only score hits on a 5 or 6.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Dimensional Pulse",
+        "id": "b2b3-afd7-37d7-772e",
+        "description": "Pulse initiated before start of turn, after TAC phase. All models without the Unyielding Construct MAR take unmodified command check. Weapon AD indicate number of required successes. Failure moves the ship xD6\" with x = Tier of ship. Models touching any acrylic part of gate are destroyed.",
+        "hidden": false,
+        "page": 25,
+        "publicationId": "b97a-2104-pub1"
+      },
+      {
+        "name": "Elusive Target",
+        "id": "f802-9135-40c1-1647",
+        "description": "An Elusive Target is only hit on a 6 by all Weapons Systems attacks from Capital Class models, and on a 5 or 6 by non-Capital Class models.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Maneuverable",
+        "id": "fa5f-8e4e-0803-c14b",
+        "description": "If a Maneuverable model is at a Full Stop, it can rotate up to 90 degrees around its Flight Peg during the Secondary Movement segment of its activation.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Unmanned",
+        "id": "5e4d-f402-ab8a-5f04",
+        "description": "An Unmanned model does not suffer Crew Loss penalties for having zero Crew.",
+        "hidden": false,
+        "page": 0
+      },
+      {
+        "name": "Unyielding Construct",
+        "id": "30a8-41f7-c1e4-8b31",
+        "description": "Model does not suffer critical hit effects, targeted strike effects or Cyberwarfare effects except those that refer to CP loss.",
+        "hidden": false,
+        "page": 25,
+        "publicationId": "b97a-2104-pub1"
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "Anathema Probe",
+        "id": "74a4-c4c8-0eec-3b30",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "infoLinks": [
+          {"id": "e544-1ce1-ab4d-5056", "hidden": false, "targetId": "f802-9135-40c1-1647", "type": "rule"},
+          {"id": "492b-d718-c45f-d8bc", "hidden": false, "targetId": "fa5f-8e4e-0803-c14b", "type": "rule"},
+          {"id": "b7b7-d977-38c6-6070", "hidden": false, "targetId": "30a8-41f7-c1e4-8b31", "type": "rule"},
+          {"id": "321c-cbf8-5452-52c5", "hidden": false, "targetId": "5e4d-f402-ab8a-5f04", "type": "rule"},
+          {"id": "a78b-71a2-b212-e9a8", "hidden": false, "targetId": "9a34-1674-e9b7-ed86", "type": "profile"}
+        ]
+      },
+      {
+        "name": "Dimensional Gate",
+        "id": "8c4c-47ab-4b82-ccc8",
+        "collective": true,
+        "hidden": false,
+        "page": 0,
+        "type": "model",
+        "constraints": [
+          {
+            "id": "minSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "maxSelections",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": false,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "pts", "typeId": "points", "value": 0}],
+        "infoLinks": [
+          {"id": "50b4-4279-c563-4679", "hidden": false, "targetId": "d23f-f626-1592-885a", "type": "rule"},
+          {"id": "1ce6-a44e-cc5c-de7f", "hidden": false, "targetId": "b2b3-afd7-37d7-772e", "type": "rule"},
+          {"id": "df42-cb41-5e55-f813", "hidden": false, "targetId": "30a8-41f7-c1e4-8b31", "type": "rule"},
+          {"id": "729f-4759-1084-4f09", "hidden": false, "targetId": "5e4d-f402-ab8a-5f04", "type": "rule"},
+          {"id": "7869-672b-5128-125a", "hidden": false, "targetId": "5613-7238-7fb3-62f4", "type": "profile"},
+          {"id": "5e60-ccf6-d5bf-f65d", "hidden": false, "targetId": "6365-e162-42ff-ee91", "type": "profile"}
+        ]
+      }
+    ]
+  }
+}
